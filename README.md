@@ -6,7 +6,7 @@
 
 ## CSS ##
 
-[常用的CSS](./CSS/css-offen-uesd.md)
+[常用的CSS](./CSS/css-offen-used.md)
 
 ## 工程化 ##
 
