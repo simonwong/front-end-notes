@@ -1,7 +1,115 @@
 # 面试 #
 
-> STAR法则
->
+## 面试题 ##
+
+### JS基础 ###
+
+1. 继承、原型链
+
+2. defineProperty、defineProperties
+
+3. this指向
+
+4. ajax原理
+
+   new XMLHttpRequest => open => send
+
+   监听onreadystatechange
+
+5. 浏览器解析过程
+
+   解析html => 构建dom树 => 构建render树 => 布局render树 => 绘制render树
+
+
+
+### ES6 ###
+
+1. promise使用场景，状态（pending、fulilled、rejected）
+
+
+
+### CSS基础 ###
+
+1. rem、em的区别
+
+​	rem是相对于根元素的font-size大小，em是先对于父元素的font-size的大小
+
+### 安全 ###
+
+1. xss
+2. https
+3. 混合内容
+4. 同源策略(端口、域名、协议)
+
+### 网络基础 ###
+
+1.  http状态码
+
+### 性能优化 ###
+
+1. 减少http请求
+2. 静态资源压缩
+3. CDN加速
+4. 减少全局变量
+5. script标签放body后面
+
+### 实例 ###
+
+1.  实现 `add(1)(2)(3) // ==> 6`
+
+2. 执行顺序
+
+   ```javascript
+   setTimeout(function () {
+       console.log(1)
+   }, 0)
+   
+   new Promise(function (resolve) {
+       console.log(2)
+       resolve()
+   }).then(function () {
+       console.log(3)
+   })
+   console.log(4)
+   
+   
+   结果 2 4 3 1
+   ```
+
+   > 知识点
+   >
+   > 宏任务：script、setTimeout、setInterval
+   >
+   > 微任务：Promise、process.nextTick
+
+   > 事件循环：
+   >
+   > 1、先执行宏任务，将任务放到eventqueue，再执行微任务梵高eventqueue。
+   >
+   > 2、将主线程的代码执行完后
+   >
+   > 3、先执行微任务queue的回调函数，再执行宏任务的queue
+
+3. 一句话打乱一个数组
+
+   `arr.sort(() => 0.5 - Math.random())`
+
+4. 数组去重
+
+   `new Set(array)`
+
+5. 路由的实现
+
+   1. `location.hash + hashchange`
+
+
+
+## 简历 ##
+
+
+
+### STAR法则 ###
+
 > Situation（情景）：工作背景
 >
 > Task（任务）：我负责什么
@@ -37,3 +145,4 @@ a: 用了什么技能做了哪些内容 **独立完成** **主导完成**
 ### 自我评价 ###
 
 > 专业背景、**技术能力**、协调合作、性格爱好
+
