@@ -261,12 +261,77 @@ $(".link").click(function () {
   `arr instanceof Array` 返回true是表示arr是数组
   当打开一个iframe，向他传递数组时，无法判断。因为每一个窗口都是自有的原型链
 
+## 关于闭包的概念 ##
+
+### 变量的作用域 ###
+
+> 全局变量和局部变量
+>
+> 函数内部可以直接读取全局变量 
+>
+> 函数外部无法读取函数内的局部变量 
+
+### 闭包 ###
+
+>能够读取其他函数内部变量的函数。
+>
+>"定义在一个函数内部的函数" 
+>
+>将函数内部和函数外部连接起来的一座桥梁 
+
+```javascript
+function f1 () {
+	var n=999;
+	function f2(){
+		return n;
+    }
+    return f2;
+}
+var result = f1();
+result(); // 999
+
+// f2就是一个闭包
+```
+
+用途：1、可以读取函数内部的变量 ；2、让这些变量的值始终保持在内存中 ；
+
+```javascript
+function f1 (asd) {
+    var n = 999;
+    nAdd = function () {
+        n += 1
+    }
+
+    function f2 () {　　　　　　
+        console.log(n);　　　　
+    }
+    return f2;
+}
+var result = f1();
+result(); // 999
+nAdd();
+result(); // 1000
+```
+
+
+
 ## 跨域 ##
 
 ### JSONP ###
 
 > 只能使用GET请求，并要求返回javascript。
 > 因为浏览器允许跨域引用js资源
+
+```javascript
+let script = document.createElement('script)
+script.src = 'http://..../login?=username=simon&callback=callback'
+document.body.appendChild(script)
+function callback (res) {
+    console.log(res)
+}
+```
+
+
 
 ### CORS ###
 
@@ -293,9 +358,9 @@ $(".link").click(function () {
 > jsx v.s. 模板
 > -  JSX 适合多逻辑场景
 > -  Javascript Templating 适合少逻辑场景
->   colocation
+>     colocation
 > -  该放一起的放一起
->   Separation of Concerns
+>     Separation of Concerns
 > -  关注点分离
 
 ### 变化侦测和渲染机制 ###
