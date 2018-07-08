@@ -1,8 +1,16 @@
 # 王思杰的前端笔记 #
 
+## JavaScript ##
+
+[日常笔记](./JavaScript/daily-notes.md)
+
+[js语言精粹笔记](./JavaScript/js-thegoodparts-notes.md)
+
+[js基础算法](./JavaScript/basic-algorithm.md)
+
 ## React ##
 
-[React的一些随记](./React/React-something.md)
+[React笔记](./React/React-something.md)
 
 ## CSS ##
 
@@ -12,3 +20,8 @@
 
 [git操作指南](./Engineering/git-operation-guide.md)
 
+## 后端 ##
+
+[Node基础笔记](./BackEnd/Node-basis-note.md)
+
+[MongoDB操作指令](./BackEnd/MongoDB-operational.md)

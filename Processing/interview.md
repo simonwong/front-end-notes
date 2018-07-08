@@ -4,7 +4,83 @@
 
 ### JS基础 ###
 
-1. 继承、原型链
+1. 类、继承、原型链
+
+   > 1、对类的理解，类是包含一系列属性方法的集合。比如人类，而每个人是他的实例对象
+   >
+   > 2、非静态属性方法，是个性的。如名字
+   >
+   > 3、静态属性方法，是共性的。如都要呼吸
+   >
+   > 4、原型链
+   >
+   > 每定义一个构造函数，这个类会自动添加一个`prototype`（原型）
+   >
+   > 每个实例对象有个`__proto__`属性，指向他的类的prototype
+   >
+   > ```javascript
+   > function Person (name) {
+   >     this.name = name
+   > }
+   > Person.prototype = {
+   >     constructor: Person,
+   >     must: 'breathe',
+   > }
+   > var wsj = new Person('wsj')
+   > Person.prototype === wsj.__proto___
+   > ```
+   >
+   > proto的作用，访问实例的属性，先看看实例有没有，没有就通过`__proto__`找类的属性
+   >
+   > ```javascript
+   > function TheMan () {
+   >     this.name = 'wsj'
+   > }
+   > var man = new TheMan()
+   > console.log(man.name) // wsj
+   > 
+   > man.name = simon
+   > console.log(man.name) // simon
+   > ```
+   >
+   > 继承
+   >
+   > ```javascript
+   > // 组合 原型链继承 + 构造函数继承（Father对象会变得不纯粹）
+   > function Father (name) {
+   >     this.name = name
+   > }
+   > Father.prototype.sayName = function () {
+   >     console.log(`My name is ${this.name}`)
+   > }
+   > 
+   > function Son () {
+   >     Father.apply(this, arguments)
+   > }
+   > Son.prototype = new Father()
+   > ```
+   >
+   > ```javascript
+   > // 寄生组合继承 (更加纯粹)
+   > function Father (name) {
+   >     this.name = name
+   > }
+   > Father.prototype.sayName = function () {
+   >     console.log(`My name is ${this.name}`)
+   > }
+   > 
+   > function Son () {
+   >     Father.apply(this, arguments)
+   > }
+   > (function () {
+   >    function Super()
+   >     Super.prototype = Father.prototype
+   >     Son.prototype = new Super()
+   > }())
+   > ```
+   >
+   > 
+
 
 2. defineProperty、defineProperties
 
@@ -20,6 +96,19 @@
 
    解析html => 构建dom树 => 构建render树 => 布局render树 => 绘制render树
 
+6. 跨域，JSONP原理
+
+   ```
+   let script = document.createElement('script)
+   script.src = 'http://..../login?=username=simon&callback=callback'
+   document.body.appendChild(script)
+   function callback (res) {
+       console.log(res)
+   }
+   ```
+
+   
+
 
 
 ### ES6 ###
@@ -32,7 +121,7 @@
 
 1. rem、em的区别
 
-​	rem是相对于根元素的font-size大小，em是先对于父元素的font-size的大小
+		rem是相对于根元素的font-size大小，em是先对于父元素的font-size的大小
 
 ### 安全 ###
 
@@ -52,6 +141,12 @@
 3. CDN加速
 4. 减少全局变量
 5. script标签放body后面
+
+### 算法 ###
+
+1. 快速排序
+
+   随机选择数组一个数A，A跟其他所有数比较，小的放左边，大的放右边，循环后，递归左边和右边执行上述同样操作，并且合并
 
 ### 实例 ###
 
