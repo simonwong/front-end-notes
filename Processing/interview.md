@@ -98,7 +98,7 @@
 
 6. 跨域，JSONP原理
 
-   ```
+   ```javascript
    let script = document.createElement('script)
    script.src = 'http://..../login?=username=simon&callback=callback'
    document.body.appendChild(script)
