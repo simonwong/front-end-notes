@@ -595,16 +595,20 @@ nvm
 
 node版本发布非常快，而且多版本共存可能性较大，推荐使用nvm来安装node
 
-```shell
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+> 下载地址（[打开](https://github.com/coreybutler/nvm-windows/releases)）
 
-$ echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
-$ echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
-$ source ~/.zshrc
+设置国内镜像
 
-$ nvm install 0.10
-$ nvm install 4
-$ nvm install 6
-$ nvm install 8
 ```
+nvm node_mirror https://npm.taobao.org/mirrors/node/
+nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+```
+
+安装最新版本号
+
+```
+nvm install latest
+```
+
+
 
