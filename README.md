@@ -18,7 +18,11 @@
 
 ## 工程化 ##
 
-[git操作指南](./Engineering/git-操作指南.md)
+[git操作指南](./Engineering/git操作指南.md)
+
+[git工作流](./Engineering/git工作流.md)
+
+[nginx反向代理](./Engineering/nginx反向代理.md)
 
 ## 后端 ##
 
