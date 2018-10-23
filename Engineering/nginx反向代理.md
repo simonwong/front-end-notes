@@ -1,6 +1,22 @@
 # nginx反向代理 #
 
-## 原理 ##
+## mac下的操作 ##
+
+> `brew search nginx` // 查询要安装的软件是否存在 
+
+> `brew info nginx` // 查看软件的配置信息 
+
+>  `brew install nginx` // 安装 
+
+>  `/usr/local/etc/nginx` conf目录 
+
+> `/usr/local/Cellar/nginx` nginx安装目录 
+
+
+
+## mac下快捷命令 ##
+
+> `nginx -s reload|reopen|stop|quit` 重新加载配置|重启|停止|退出 
 
 
 
