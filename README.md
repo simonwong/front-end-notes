@@ -36,3 +36,7 @@
 
 [进制](./ComputerBasic/进制.md)
 
+[HTTP](./ComputerBasic/http.md)
+
+
+
