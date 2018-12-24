@@ -29,3 +29,10 @@
 [Node基础笔记](./BackEnd/NodeJs基础笔记.md)
 
 [MongoDB操作指令](./BackEnd/mongoDB操作指南.md)
+
+
+
+## 计算机基础 ##
+
+[进制](./ComputerBasic/进制.md)
+

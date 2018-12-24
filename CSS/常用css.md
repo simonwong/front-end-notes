@@ -196,6 +196,17 @@ div {
  }
  ```
 
+### 层击穿 ###
+
+```
+pointer-events: none; 可使得层可击穿
+pointer-events: auto; 默认
+```
+
+
+
+
+
 ##  优化 ##
 
 ### 使字体更加清晰 ###
