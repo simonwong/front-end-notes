@@ -3,7 +3,7 @@
 # React笔记
 ## React工作原理 ##
 
-![](http://on0m38azq.bkt.clouddn.com/18-6-7/39311438.jpg)
+![](http://file.wangsijie.top/18-6-7/39311438.jpg)
 
 
 
@@ -15,7 +15,7 @@ Virtual DOM
 
 diff算法
 `O(n^2)`的时间复杂度
-![](http://on0m38azq.bkt.clouddn.com/17-12-5/7884015.jpg)
+![](http://file.wangsijie.top/17-12-5/7884015.jpg)
 
 `react`是`O(n)`的时间复杂度
 A挂到B，不是移动，而是`unmount` A，然后再B上`mount`
@@ -24,7 +24,7 @@ A挂到B，不是移动，而是`unmount` A，然后再B上`mount`
 下面这种情况，动态产生子组件，插入一个X，react会认为B被删除，加入了X。会造成浪费。
 这个时候需要有一个key的props，来表示插了一个。
 key在兄弟节点必须唯一的，稳定的
-![](http://on0m38azq.bkt.clouddn.com/17-12-5/48778188.jpg)
+![](http://file.wangsijie.top/17-12-5/48778188.jpg)
 
 ### 一切都是组件 ###
 
@@ -37,7 +37,7 @@ key在兄弟节点必须唯一的，稳定的
 
 ## 使用props还是state ##
 
-![](http://on0m38azq.bkt.clouddn.com/17-12-5/98686630.jpg)
+![](http://file.wangsijie.top/17-12-5/98686630.jpg)
 
 ## React 生命周期 ##
 
@@ -128,12 +128,12 @@ const HoC = (WrappedComponent, LoginView) => {
 ## 组件通讯 ##
 
 > props传递
-> ![](http://on0m38azq.bkt.clouddn.com/17-12-5/24094491.jpg)
+> ![](http://file.wangsijie.top/17-12-5/24094491.jpg)
 
 > 通过父级
-> ![](http://on0m38azq.bkt.clouddn.com/17-12-5/27569226.jpg)
+> ![](http://file.wangsijie.top/17-12-5/27569226.jpg)
 
 > 方法一：全局变量
 > 方法二：context，差不多是全局变量
-> ![](http://on0m38azq.bkt.clouddn.com/17-12-5/57846296.jpg)
+> ![](http://file.wangsijie.top/17-12-5/57846296.jpg)
 

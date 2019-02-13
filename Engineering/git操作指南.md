@@ -2,7 +2,7 @@
 
 
 
-![](http://on0m38azq.bkt.clouddn.com/18-5-22/91985389.jpg)
+![](http://file.wangsijie.top/18-5-22/91985389.jpg)
 
 
 
@@ -38,7 +38,7 @@
 
 `git checkout -b newBranch` 创建并切换新分支 
 
-`git branch -f master HEAD~3` 强制将master分支的提交移动到HEAD的上3个提交
+`git remote update origin -p` 更新本地显示的远程分支
 
 `git push origin --delete branch` 删除线上分支
 
@@ -52,9 +52,29 @@
 
 
 
-### 分离HEAD ###
+### 分离`HEAD` ###
+
+> `HEAD`是一个对当前检出记录的符号引用
+>
+> 分离`HEAD`就是让其指向了某个具体的提交记录而不是分支名
+
+`git checkout commit_id`从分支中分离HEAD并让它指向一个提交记录
+
+
+
+- **相对引用**
+
+> 在一个分支或`HEAD`开始计算，
+>
+> `^`向上移动1个提交记录
+>
+> `~<num>`向上移动多个提交记录
 
 `git checkout branch^` 相对引用到branch分支的上一个提交
+
+`git branch -f master HEAD~3` 强制将master分支的提交移动到HEAD的上3个提交
+
+
 
 
 

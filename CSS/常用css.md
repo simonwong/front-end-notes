@@ -255,3 +255,57 @@ textarea {
 
 
 
+## Sass / Less
+
+
+
+### 变量共享的方案 ###
+
+```javascript
+// src/styles/variables.js
+module.exports = {
+  // 主颜色
+  'primary-color': '#0C4CFF',
+  // 出错颜色
+  'error-color': '#F15533',
+  // 成功颜色
+  'success-color': '#35B34A',
+};
+```
+
+```javascript
+// webpack.config.js
+const styleVariables = require('src/styles/variables');
+
+// ...
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader?sourceMap&minimize',
+          {
+            loader: 'sass-loader',
+            options: {
+              data: Object.keys(styleVariables)
+                .map(key => `\$${key}: ${styleVariables[key]};`)
+                .join('\n'),
+              sourceMap: true,
+              sourceMapContents: true
+            }
+          }
+        ]
+      }
+//...
+```
+
+
+
+然后就可以在scss文件中，直接引用变量
+
+```
+// page.scss
+.button {
+  background: $primary-color;
+}
+```
+

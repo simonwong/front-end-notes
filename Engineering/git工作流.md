@@ -26,9 +26,9 @@
 
 
 
-![](http://on0m38azq.bkt.clouddn.com/18-8-16/29456959.jpg)
+![](http://file.wangsijie.top/18-8-16/29456959.jpg)
 
-![](http://on0m38azq.bkt.clouddn.com/18-8-16/53700696.jpg)
+![](http://file.wangsijie.top/18-8-16/53700696.jpg)
 
 如图
 
@@ -38,7 +38,7 @@
 
 因为git默认都是`master`分支，所以开发环境直接在`master`上将会很方便。
 
-![](http://on0m38azq.bkt.clouddn.com/18-8-17/35569759.jpg)
+![](http://file.wangsijie.top/18-8-17/35569759.jpg)
 
 ### 开发流程 ###
 
@@ -61,7 +61,7 @@ Git有两种合并
 
 
 
-![](http://on0m38azq.bkt.clouddn.com/18-8-17/53775524.jpg)
+![](http://file.wangsijie.top/18-8-17/53775524.jpg)
 
 ### pull request ###
 
