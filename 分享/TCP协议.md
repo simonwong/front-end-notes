@@ -14,7 +14,7 @@
 
 
 
-![](http://file.wangsijie.top/share/2019-1-3/tcpbg2017060804.png)
+![](http://file.wangsijie.top/share/tcp/bg2017060804.png)
 
 - 以太网协议(Ethernet)规定电子信号如何组成数据包，解决子网内部的点对点通信
 - IP协议定义了一套地址规则，可以连接多个局域网
@@ -27,7 +27,7 @@
 
 ## 数据包大小 ##
 
-![](http://file.wangsijie.top/share/2019-1-3/tcpbg2012052913.png)
+![](http://file.wangsijie.top/share/tcp/bg2012052913.png)
 
 
 
@@ -105,13 +105,13 @@ ACK携带两个信息
 >
 > 接收方的接收窗口的剩余容量
 
-![](http://file.wangsijie.top/share/2019-1-3/tcpbg2017060809.png)
+![](http://file.wangsijie.top/share/tcp/bg2017060809.png)
 
 
 
 > 实际上TCP的通信是双向的，双方都需要发送ACK
 
-![](http://file.wangsijie.top/share/2019-1-3/tcpbg2017060812.jpg)
+![](http://file.wangsijie.top/share/tcp/bg2017060812.jpg)
 
 > 不要被这个图片误导，双方的第一次给数据包，他们的seq都是随机生成的。
 
@@ -133,7 +133,7 @@ ACK携带两个信息
 
 如果发送方收到了3个连续的重复ACK，或者超时收到ACK，就会确认这个包丢了，重新发送
 
-![](http://file.wangsijie.top/share/2019-1-3/tcpbg2017060811.png)
+![](http://file.wangsijie.top/share/tcp/bg2017060811.png)
 
 这里关于2号包重发后，3、4、5号包是否重发，涉及到TCP的版本。
 
@@ -165,7 +165,7 @@ ACK携带两个信息
 
 ### 理解 ###
 
-![](http://file.wangsijie.top/share/2019-1-3/tcp221638042536625.png)
+![](http://file.wangsijie.top/share/tcp/221638042536625.png)
 
 - 第一次握手：主机A发送位码`SYN=1`，随机生成`seq number=x`，将这个数据包发送给主机B
 - 第二次握手：主机B收到`SYN=1`，确认了联机信息，发送`ack number = x+1`，`SYN=1`，`ACK=1`，随机生成`seq number=y`。此时主机A进入ESTABLISHED已确认状态
@@ -197,7 +197,7 @@ IP 192.168.1.116.3337 > 192.168.1.123.7788: ack 1739326487,ack 1
 
 ### 理解 ###
 
-![](http://file.wangsijie.top/share/2019-1-3/tcp221638047387940.jpg)
+![](http://file.wangsijie.top/share/tcp/221638047387940.jpg)
 
 
 
