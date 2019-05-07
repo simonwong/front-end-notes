@@ -23,6 +23,22 @@ mongorestore -h 192.168.1.113:27017 -d ef_manage D:\Mongo\backup\ef_manage
 >- mongdb目录键新建 `log/mongo.log`
 >- 管理员启动cmd
 
+
+
+mac下启动mongodb服务
+
+> data目录（usr/local/Cellar/mongodb/data/db)
+>
+> log目录（usr/local/Cellar/mongodb/)
+>
+> conf目录（usr/local/etc/mongod.conf)
+
+
+
+`sudo mongod --config /usr/local/etc/mongod.conf`
+
+
+
 ```
 mongod --logpath D:\mongodb\log\mongo.log --dbpath D:mongoData --serviceName MongoDB --directoryperdb --install
 
