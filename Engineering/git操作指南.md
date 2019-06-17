@@ -24,6 +24,14 @@
 
 
 
+### 远程仓库 ###
+
+`git remote add origin git@server-name:path/repo-name.git` 关联远程仓库
+
+`git push -u origin master` 第一次关联后的推送
+
+
+
 ### 查看 ###
 
 `git log`显示最近的提交历史
@@ -91,3 +99,15 @@
 > 但是reset后前面的变更，依然处于未加入暂缓区状态
 
 `git revert HEAD`向下新增加一个提交，提交的内容为要撤回的提交的内容
+
+
+
+## tag 操作 ##
+
+
+
+- `git tag` 查看tag
+
+- `git tag -a v1.1 -m "version1.1"` 创建tag
+- `git show v1.1` 查看tag 信息
+- `git push origin v1.1` 推送tag

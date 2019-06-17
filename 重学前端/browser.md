@@ -105,3 +105,50 @@
 > 位图最终绘制到屏幕上，变成肉眼可见的图像，操作系统来处理
 
 绘制发生的频率很高，鼠标滑过浏览器显示区域，每次移动都会造成了重新绘制
+
+
+
+## CSSOM ##
+
+### CSSOM ###
+
+
+
+### CSSOM view ###
+
+
+
+#### 窗口 API ####
+
+- moveTo(x,  y)
+- moveBy(x, y)
+- resizeTo(x, y)
+- resizeBy(x, y)
+
+
+
+#### 视口滚动 API ####
+
+- scrollX
+- scrollY
+- scroll(x, y)
+- scrollBy(x, y)
+
+
+
+#### 元素滚动 API ####
+
+- scrollTop
+- scrollLeft
+- scrollWidth
+- scrollHeight
+- scroll(x, y)
+- scrollBy(x, y)
+- scrollIntoView(arg)
+
+
+
+#### 全尺寸信息 ####
+
+![](http://file.wangsijie.top/share/chongxuefe/b6c7281d86eb7214edf17069f95ae610.png)
+

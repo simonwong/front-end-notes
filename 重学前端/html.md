@@ -147,6 +147,112 @@ ruby使用场景
 
 
 
+## 浏览器 DOM ##
+
+
+
+DOM API
+
+- 节点
+- 事件
+- Range
+- 遍历
+
+
+
+### 节点 ###
+
+![](http://file.wangsijie.top/share/chongxuefe/6e278e450d8cc7122da3616fd18b9cf6.png)
+
+
+
+#### DOM 树关系 ####
+
+- parentNode
+- ChildNodes
+- firstChild
+- lastChild
+- nextSibling
+- previousSibling
+
+
+
+#### 操作 DOM API
+
+- appendChild
+- insertBefore
+- removeChild
+- replaceChild
+
+
+
+#### 创建 DOM API
+
+- createElement
+- createTextNode
+- 。。。
+
+
+
+#### 属性操作 API ####
+
+- getAttribute
+- setAttribute
+- removeAttribute
+- hasAttribute
+
+
+
+#### 查找元素 ####
+
+- querySelector
+- querySelectorAll
+- getElementById
+- getElementsByName
+- getElementsByTagName
+- getElementsByClassName
+
+
+
+### 遍历 ###
+
+- NodeIterator
+- TreeWalker
+
+
+
+### Range ###
+
+Range API 是一个比较专业的领域，用来做富文本编辑器
+
+
+
+## HTML 链接 ##
+
+
+
+![](http://file.wangsijie.top/share/chongxuefe/caab7832c425b3af2b3adae747e6f551.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
