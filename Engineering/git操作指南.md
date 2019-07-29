@@ -20,6 +20,16 @@
 
 
 
+## git 问题处理 ##
+
+  - 每次 push 都要输入账号密码 
+
+    1. ` git config --global credential.helper store` 缓存账号密码
+    2. `cat ~/.gitconfig` 查看配置结果
+    3. 配置 ssh
+
+
+
 ## 常用操作 ##
 
 
