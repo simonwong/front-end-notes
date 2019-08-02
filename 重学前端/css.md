@@ -9,7 +9,7 @@
 - @counter-style		产生一种数据，用来定义列表项
 - @key-frames		产生一种数据，用来定义动画关键帧
 - @fontface	定义字体
-- @support	检查环境，类似 @media
+- @support	 检查环境，类似 @media
 - @namespace	给内部的 css 选择器全部带上特定的命名空间
 
 
