@@ -24,7 +24,7 @@ a, img {
 }
 html, body {
     -webkit-user-select: none; /*禁止选中文本*/
-    wuser-select: none;
+    user-select: none;
 }
 ```
 
