@@ -40,7 +40,7 @@
 
 `git push -u origin master` 第一次关联后的推送
 
-
+`git push origin <分支名> --force` commit 撤回后，推送。用来撤回线上的 commit push
 
 ### 查看 ###
 
@@ -94,8 +94,6 @@
 
 
 
-
-
 ### 撤销变更 ###
 
 `git checkout -- file_name` 撤回更改
@@ -110,11 +108,11 @@
 
 `git revert HEAD`向下新增加一个提交，提交的内容为要撤回的提交的内容
 
+`git reset --soft HEAD^` 撤回 commit 且保留更改内容
+
 
 
 ## tag 操作 ##
-
-
 
 - `git tag` 查看tag
 
