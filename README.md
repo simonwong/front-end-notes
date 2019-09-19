@@ -28,7 +28,7 @@
 
 [git工作流](./Engineering/git工作流.md)
 
-[反向代理](./Engineering/nginx反向代理.md)
+[nginx配置](./Engineering/nginx配置.md)
 
 [提升开发体验](./Engineering/提升开发体验.md)
 
