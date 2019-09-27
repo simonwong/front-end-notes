@@ -1,8 +1,8 @@
 # 常用的CSS
 
-##  布局 ##
+##  布局
 
-### 全局使用rem，局部使用em ###
+### 全局使用rem，局部使用em
 
 ```css
 h2 {
@@ -25,7 +25,7 @@ aside .module {
 
 
 
-###  表格的处理-等宽单元格 ###
+###  表格的处理-等宽单元格
 
 ```css
 .calendar {
@@ -45,7 +45,7 @@ aside .module {
 }
 ```
 
-### 内部比例盒 ###
+### 内部比例盒
 
 ```css
 .container
@@ -67,9 +67,9 @@ aside .module {
 
 
 
-## 技巧 ##
+## 技巧
 
-### 继承 `box-sizing`  ###
+### 继承 `box-sizing`
 
 ```css
 html {
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-### 重置元素的属性 `unset` ###
+### 重置元素的属性 `unset`
 
 ```css
 button {
@@ -90,7 +90,7 @@ button {
 
 > `all`在`IE11`内不支持
 
-### 导航栏的边线 `:not()` ###
+### 导航栏的边线 `:not()`
 
 ```css
 .nav li:not(:last-child) {
@@ -98,7 +98,7 @@ button {
 }
 ```
 
-### 背景图片的处理 ###
+### 背景图片的处理
 
 ```css
 div {
@@ -127,7 +127,7 @@ div {
 
 
 
-### 文本溢出 ###
+### 文本溢出
 
 > 单行文本溢出
 
@@ -156,7 +156,7 @@ div {
 
 
 
-### 清除浮动  ###
+### 清除浮动
 
 ```css
 .clearfix:before,
@@ -169,7 +169,7 @@ div {
 }
 ```
 
-### 垂直居中处理  ###
+### 垂直居中处理
 
 1. 行高 `line-height`
 
@@ -184,6 +184,7 @@ div {
         -webkit-transform: translate(-50%, -50%);
 	 }
  ```
+
 4. 使用flexbox
 
  ```css
@@ -194,7 +195,7 @@ div {
  }
  ```
 
-### 层击穿 ###
+### 层击穿
 
 ```
 pointer-events: none; 可使得层可击穿
@@ -205,9 +206,9 @@ pointer-events: auto; 默认
 
 
 
-##  优化 ##
+##  优化
 
-### 使字体更加清晰 ###
+### 使字体更加清晰
 ```css
 body {
 	-webkit-font-smoothing: antialiased;
@@ -215,7 +216,7 @@ body {
 }
 ```
 
-### 为加载失败的图片添加样式 ###
+### 为加载失败的图片添加样式
 
 ```css
 img {
@@ -240,7 +241,7 @@ img::after {
 }
 ```
 
-### 为了更好的移动端体验，为表单元素使用`font-size` ###
+### 为了更好的移动端体验，为表单元素使用`font-size`
 
 ```css
 input[type="text"],
@@ -257,7 +258,7 @@ textarea {
 
 
 
-### 变量共享的方案 ###
+### 变量共享的方案
 
 ```javascript
 // src/styles/variables.js

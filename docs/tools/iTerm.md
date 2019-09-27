@@ -1,28 +1,28 @@
-# iTerm #
+# iTerm
 
-## 常用命令 ##
+## 常用命令
 
-## 分屏 ##
+### 分屏
 
 - 垂直分屏 `commond + d`
 - 水平分屏 `commond + shift + d`
 
-## 操作 ##
+### 操作
 
 - 清除当前行 `ctrl + u`
 - 到行首 `ctrl + a`
 - 到行尾 `ctrl + e`
 - 清屏 `commond + r` 、 `clear`
 
-## 无敌好用 ##
+### 无敌好用
 
 - 剪贴板历史 `commond + shift + h`
 
 
 
-## 初始化 ##
+## 初始化
 
-### 终端 ###
+### 终端
 
 - 使用 zsh
 
@@ -38,7 +38,7 @@ chsh -s /bin/bash
 
 
 
-### oh my zsh ###
+### oh my zsh
 
 - 安装 oh my zsh
 
@@ -52,7 +52,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 
 
-### powerline ###
+### powerline
 
 - 安装 powerline
 
@@ -68,7 +68,7 @@ sudo easy_install pip
 
 
 
-### 字体 PowerFonts ###
+### 字体 PowerFonts
 
 ```shell
 # git clone
@@ -83,7 +83,7 @@ cd fonts
 
 
 
-### 配色方案 ###
+### 配色方案
 
 ```shell
 git clone https://github.com/altercation/solarized
@@ -95,6 +95,6 @@ open .
 
 
 
-### 参考 ###
+### 参考
 
 https://segmentfault.com/a/1190000014992947#articleHeader0

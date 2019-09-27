@@ -1,4 +1,4 @@
-## 浏览器是如何工作的 ##
+## 浏览器是如何工作的
 
 
 
@@ -17,7 +17,7 @@
 
 
 
-### 一、HTTP 协议 ###
+### 一、HTTP 协议
 
 ![](http://file.wangsijie.top/share/chongxuefe/3db5e0f362bc276b83c7564430ecb0a1.jpg)
 
@@ -31,7 +31,7 @@
 
 
 
-### 二、解析代码 ###
+### 二、解析代码
 
 解析 HTTP 的 Response 的 body。
 
@@ -55,7 +55,7 @@
 
 
 
-### 三、计算 CSS 属性 ###
+### 三、计算 CSS 属性
 
 
 
@@ -63,7 +63,7 @@
 
 
 
-### 四、排版 ###
+### 四、排版
 
 
 
@@ -80,7 +80,7 @@
 
 
 
-### 五、渲染 - 合成 - 绘制 ###
+### 五、渲染 - 合成 - 绘制
 
 > render : 渲染
 >
@@ -108,17 +108,17 @@
 
 
 
-## CSSOM ##
+## CSSOM
 
-### CSSOM ###
-
-
-
-### CSSOM view ###
+### CSSOM
 
 
 
-#### 窗口 API ####
+### CSSOM view
+
+
+
+#### 窗口 API
 
 - moveTo(x,  y)
 - moveBy(x, y)
@@ -127,7 +127,7 @@
 
 
 
-#### 视口滚动 API ####
+#### 视口滚动 API
 
 - scrollX
 - scrollY
@@ -136,7 +136,7 @@
 
 
 
-#### 元素滚动 API ####
+#### 元素滚动 API
 
 - scrollTop
 - scrollLeft
@@ -148,7 +148,7 @@
 
 
 
-#### 全尺寸信息 ####
+#### 全尺寸信息
 
 ![](http://file.wangsijie.top/share/chongxuefe/b6c7281d86eb7214edf17069f95ae610.png)
 

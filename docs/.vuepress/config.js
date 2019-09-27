@@ -3,7 +3,10 @@ const moment = require('moment')
 module.exports = {
     base: '/front-end-notes/',
     title: '王思杰的前端笔记',
-    description: '王思杰的前端笔记，日常总结，工具使用，分享记录，框架使用等等',
+    description: '分享日常总结，工具框架的使用以及整理',
+    head: [
+        ['link', { rel: 'icon', href: '/logo.png' }]
+    ],
     themeConfig: {
         nav: [
             {
@@ -19,19 +22,23 @@ module.exports = {
                     }
                 ],
             },
-            { text: '前端基础', link: '/basic/' },
-            { text: '前端工程', link: '/engineering/' },
-            { text: '后端', link: '/backend/' },
-            { text: '计算机基础', link: '/computerbasic/' },
+            { text: '前端进阶', link: '/advanced/模块/' },
+            { text: '工具', link: '/tools/' },
+            { text: '后端', link: '/backend/node基础/' },
+            { text: '计算机基础', link: '/computerbasic/进制/' },
             { text: 'Github', link: 'https://github.com/simonjayw' },
         ],
         sidebar: {
             // 笔记
             '/note/': [
-                '常用的css',
+                '',
                 '日常笔记',
+                '常用的css',
                 '构建脚手架',
                 'webapp',
+                '基础算法',
+                'js语言精粹',
+                '提升开发体验',
             ],
             '/重学前端/': [
                 '',
@@ -40,16 +47,19 @@ module.exports = {
                 'javascript',
                 'browser',
             ],
-            // 前端基础
-            '/basic/': [
-                '基础算法',
-                'js语言精粹',
-            ],
-            // 前端工程
-            '/engineering/': [
+            // 前端进阶
+            '/advanced/': [
                 '模块',
                 'yarn',
                 'nginx配置',
+                'git操作指南',
+                'gitlab-workflow.md',
+                'mac多git账户配置',
+            ],
+            // 工具
+            '/tools/': [
+                '',
+                'iTerm',
             ],
             // 后端
             '/backend/': [
@@ -64,7 +74,7 @@ module.exports = {
         }
     },
     plugins: [
-        '@vuepress/back-to-top',
+        ['@vuepress/back-to-top', true],
         [
             '@vuepress/last-updated',
             {
@@ -72,6 +82,9 @@ module.exports = {
                     return moment(timestamp).fromNow()
                 }
             }
-        ]
+        ],
+        ['@vuepress/google-analytics', {
+            ga: 'UA-148904867-1'
+        }],
     ],
 }

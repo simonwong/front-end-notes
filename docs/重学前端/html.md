@@ -1,6 +1,6 @@
-# HTML #
+# HTML
 
-## HTML语义 ##
+## HTML语义
 
 > 对于语义标签，“用对”比“不用”好，“不用”比“用错”好
 
@@ -70,7 +70,7 @@ ruby使用场景
 
 
 
-## head 标签 ##
+## head 标签
 
 
 
@@ -147,7 +147,7 @@ ruby使用场景
 
 
 
-## 浏览器 DOM ##
+## 浏览器 DOM
 
 
 
@@ -160,13 +160,13 @@ DOM API
 
 
 
-### 节点 ###
+### 节点
 
 ![](http://file.wangsijie.top/share/chongxuefe/6e278e450d8cc7122da3616fd18b9cf6.png)
 
 
 
-#### DOM 树关系 ####
+#### DOM 树关系
 
 - parentNode
 - ChildNodes
@@ -194,7 +194,7 @@ DOM API
 
 
 
-#### 属性操作 API ####
+#### 属性操作 API
 
 - getAttribute
 - setAttribute
@@ -203,7 +203,7 @@ DOM API
 
 
 
-#### 查找元素 ####
+#### 查找元素
 
 - querySelector
 - querySelectorAll
@@ -214,20 +214,20 @@ DOM API
 
 
 
-### 遍历 ###
+### 遍历
 
 - NodeIterator
 - TreeWalker
 
 
 
-### Range ###
+### Range
 
 Range API 是一个比较专业的领域，用来做富文本编辑器
 
 
 
-## HTML 链接 ##
+## HTML 链接
 
 
 

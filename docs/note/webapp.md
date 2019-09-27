@@ -1,12 +1,10 @@
-# webapp #
+# webapp 开发总结
 
 
-
-## 样式 ##
-
+## 样式
 
 
-### 使用无衬字体 ###
+### 使用无衬字体
 
 ```css
 body {
@@ -16,7 +14,7 @@ body {
 
 
 
-### 基础交互 ###
+### 基础交互
 
 ```css
 a, img {
@@ -29,8 +27,7 @@ html, body {
 ```
 
 
-
-### 常用 ###
+### 常用
 
 HTML设置
 
@@ -59,12 +56,7 @@ div {
 ```
 
 
-
-
-
-
-
-## meta 标签 ##
+## meta 标签
 
 ```html
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -82,10 +74,7 @@ div {
 ```
 
 
-
-
-
-## 性能 ##
+## 性能
 
 - 所有图片压缩转为80%质量的图片、雪碧图
 - 初始化请求资源数<4
@@ -93,24 +82,21 @@ div {
 - 少使用高级选择器
 
 
-
-## 移动端适配 ##
-
+## 移动端适配
 
 
-### vw ###
+### vw
 
 > [如何在vue项目项目中使用 vw 实现移动端适配](<https://www.w3cplus.com/mobile/vw-layout-in-vue.html>)
 >
 > 阅读码 944321
 
-### 手淘方案 ###
+### 手淘方案
 
 [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
 
 
-
-### rem + vw ###
+### rem + vw
 
 ```css
 html {
@@ -120,4 +106,3 @@ html {
     width: 0.28rem; /*如果在iphone5上(宽度320)，结果为14px*/
 }
 ```
-

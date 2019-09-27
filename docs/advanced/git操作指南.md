@@ -1,4 +1,4 @@
-# `git`操作指南 #
+# `git`操作指南
 
 
 
@@ -6,13 +6,12 @@
 
 
 
-## 一些概念 ##
+## 一些概念
 
 `HEAD` 指向当前分支上最近的一次提交
 
 
-
-### 相对引用 ###
+### 相对引用
 
 `HEAD^`向上移动1个提交记录
 
@@ -20,7 +19,7 @@
 
 
 
-## git 问题处理 ##
+## git 问题处理
 
   - 每次 push 都要输入账号密码 
 
@@ -30,11 +29,11 @@
 
 
 
-## 常用操作 ##
+## 常用操作
 
 
 
-### 远程仓库 ###
+### 远程仓库
 
 `git remote add origin git@server-name:path/repo-name.git` 关联远程仓库
 
@@ -42,7 +41,7 @@
 
 `git push origin <分支名> --force` commit 撤回后，推送。用来撤回线上的 commit push
 
-### 查看 ###
+### 查看
 
 `git log`显示最近的提交历史
 
@@ -52,7 +51,7 @@
 
 
 
-### 分支 ###
+### 分支
 
 `git checkout -b newBranch` 创建并切换新分支 
 
@@ -62,7 +61,7 @@
 
 
 
-### 合并 ###
+### 合并
 
 `git merge --no-ff theBranch` 合并分支，并且保留原分支的提交历史
 
@@ -70,7 +69,7 @@
 
 
 
-### 分离`HEAD` ###
+### 分离`HEAD` 
 
 > `HEAD`是一个对当前检出记录的符号引用
 >
@@ -94,7 +93,7 @@
 
 
 
-### 撤销变更 ###
+### 撤销变更
 
 `git checkout -- file_name` 撤回更改
 
@@ -112,7 +111,19 @@
 
 
 
-## tag 操作 ##
+### 贮藏
+
+`git stash` 将变更贮藏
+
+`git stash list` 贮藏列表
+
+`git stash apply` 应用贮藏
+
+`git stash drop stash${1}`  移除 
+
+
+
+### tag 操作
 
 - `git tag` 查看tag
 
