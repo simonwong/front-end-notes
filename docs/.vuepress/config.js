@@ -1,7 +1,7 @@
 const moment = require('moment')
 
 module.exports = {
-    base: '/front-end-notes-site/',
+    base: '/',
     title: '王思杰的前端笔记',
     description: '分享日常总结，工具框架的使用以及整理',
     head: [
