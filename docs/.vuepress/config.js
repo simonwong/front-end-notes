@@ -22,7 +22,7 @@ module.exports = {
                     }
                 ],
             },
-            { text: '前端进阶', link: '/advanced/模块/' },
+            { text: '前端进阶', link: '/advanced/webpack/' },
             { text: '工具', link: '/tools/' },
             { text: '后端', link: '/backend/node基础/' },
             { text: '计算机基础', link: '/computerbasic/进制/' },
@@ -49,8 +49,17 @@ module.exports = {
             ],
             // 前端进阶
             '/advanced/': [
+                {
+                    title: 'Webpack',
+                    children: [
+                        'webpack/',
+                        'webpack/config',
+                        'webpack/optimization',
+                    ],
+                },
                 '模块',
                 'yarn',
+                'TypeScript',
                 'nginx配置',
                 'git操作指南',
                 'gitlab-workflow.md',

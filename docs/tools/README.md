@@ -4,7 +4,7 @@
 
 ## 开发
 
-### iTrem - 终端
+### 1、iTrem - 终端
 
 > 无敌好用的终端
 
@@ -18,7 +18,7 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 
 
-### VSCode - 编辑器
+### 2、VSCode - 编辑器
 
 > 无敌好用的编辑器
 
@@ -35,7 +35,7 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 
 
-### Homebrew 
+### 3、Homebrew 
 
 > macOS（或 Linux）缺失的软件包的管理器
 
@@ -51,7 +51,7 @@ brew install [appName]
 
 ## 协作
 
-### Spark - 邮箱
+### 1、Spark - 邮箱
 
 > 没有广告
 
@@ -61,7 +61,7 @@ brew install [appName]
 
 ## 写作
 
-### Typora - markdowm 编辑工具
+### 1、Typora - markdowm 编辑工具
 
 > 所见即所得的 Markdown 编辑工具
 
