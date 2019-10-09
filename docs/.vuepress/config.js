@@ -69,6 +69,7 @@ module.exports = {
             '/tools/': [
                 '',
                 'iTerm',
+                'Charles',
             ],
             // 后端
             '/backend/': [
