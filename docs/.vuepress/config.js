@@ -10,17 +10,8 @@ module.exports = {
     themeConfig: {
         nav: [
             {
-                text: '笔记',
-                items: [
-                    {
-                        text: '日常',
-                        link: '/note/'
-                    },
-                    {
-                        text: '重学前端',
-                        link: '/重学前端/',
-                    }
-                ],
+                text: '日常笔记',
+                link: '/note/',
             },
             { text: '前端进阶', link: '/advanced/webpack/' },
             { text: '工具', link: '/tools/' },
@@ -46,6 +37,7 @@ module.exports = {
                 'css',
                 'javascript',
                 'browser',
+                'engineering-practice',
             ],
             // 前端进阶
             '/advanced/': [
