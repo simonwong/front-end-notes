@@ -87,6 +87,8 @@ SeaJS
 
 ## 从 webpack 打包分析模块化
 
+下面代码的仓库 -> [webpack-bundle-analyze](https://github.com/simonjayw/note-example-code/tree/master/webpack-bundle-analyze)
+
 最简单的打包结果
 
 ```javascript
@@ -405,5 +407,6 @@ const config = {
 - lodash 、react-bootstrap
 
 使用 [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)
+
 
 

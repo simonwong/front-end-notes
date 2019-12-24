@@ -111,6 +111,51 @@
 
 
 
+### 变基
+
+`git rebase -i asdas` asdas 提交之前的都合并
+
+```
+pick 97fe73f feat: update
+pick 62573b8 feat: add 
+```
+
+
+
+```
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+```
+
+pick 选择这个 commit 作为最新的代码
+
+squash 将这个 commit 压缩
+
+
+
+r
+
+s
+
+s
+
+
+
+
+
+然后 `git rebase --contine`
+
+
+
 ### 贮藏
 
 `git stash` 将变更贮藏
@@ -130,3 +175,4 @@
 - `git tag -a v1.1 -m "version1.1"` 创建tag
 - `git show v1.1` 查看tag 信息
 - `git push origin v1.1` 推送tag
+

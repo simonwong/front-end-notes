@@ -63,6 +63,8 @@ var another_stooge = Object.create(stooge);
 ```
 ### 反射 ###
 
+
+
 > 原型链中的任何属性都会有产生值
 
 ```js

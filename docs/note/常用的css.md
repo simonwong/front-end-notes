@@ -104,8 +104,8 @@ button {
 div {
     background-position: center right;
     background-repeat: no-repeat;/* 图片重复 repeat-x,repeat-y */
-    background-attachment： fixed;/* 固定背景图片 */
-    background-size： cover; /* 规定尺寸 */
+    background-attachment: fixed;/* 固定背景图片 */
+    background-size: cover; /* 规定尺寸 */
 }
 ```
 
@@ -146,11 +146,10 @@ div {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-all;超出换行，单词会被截断*/
-    /*word-wrap:break-word; 同超出换行，单词不会截断*/
-    -webkit-box-orient: vertical;/*子元素水平或垂直排列*/
-    -webkit-line-clamp: 2;
-    /*文本显示行数，需要结合弹性盒子，排列方向两个属性*/
+    -webkit-line-clamp: 2; /* 文本显示行数，需要结合弹性盒子，排列方向两个属性 */
+    -webkit-box-orient: vertical;/* 子元素水平或垂直排列 */
+    /* word-break: break-all; 超出换行，单词会被截断 */
+    /* word-wrap:break-word; 同超出换行，单词不会截断 */
 }
 ```
 
