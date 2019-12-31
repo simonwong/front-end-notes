@@ -9,15 +9,13 @@ module.exports = {
     ],
     themeConfig: {
         nav: [
-            {
-                text: '日常笔记',
-                link: '/note/',
-            },
+            { text: '日常笔记', link: '/note/' },
+            { text: '分享', link: '/share/' },
             { text: '前端进阶', link: '/advanced/webpack/' },
             { text: '工具', link: '/tools/' },
             { text: '后端', link: '/backend/node基础/' },
             { text: '计算机基础', link: '/computerbasic/进制/' },
-            { text: 'Github', link: 'https://github.com/simonjayw' },
+            { text: 'Github', link: 'https://github.com/simonwong' },
         ],
         sidebar: {
             // 笔记
@@ -30,6 +28,10 @@ module.exports = {
                 '基础算法',
                 'js语言精粹',
                 '提升开发体验',
+            ],
+            '/share/': [
+                '从 webpack 打包看前端模块化',
+                'TypeScript、Rollup 搭建工具库',
             ],
             '/重学前端/': [
                 '',
@@ -49,7 +51,7 @@ module.exports = {
                         'webpack/optimization',
                     ],
                 },
-                '模块',
+                'npm',
                 'yarn',
                 'TypeScript',
                 'nginx配置',

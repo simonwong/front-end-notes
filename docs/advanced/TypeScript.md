@@ -1,8 +1,8 @@
-# TypeScript #
+# TypeScript
 
 
 
-## 配置文件 ##
+## 配置文件
 
 ```json
 {
