@@ -10,7 +10,7 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '日常笔记', link: '/note/' },
-            { text: '分享', link: '/share/' },
+            { text: '分享', link: '/share/TypeScript、Rollup 搭建工具库/' },
             { text: '前端进阶', link: '/advanced/webpack/' },
             { text: '工具', link: '/tools/' },
             { text: '后端', link: '/backend/node基础/' },
@@ -30,8 +30,8 @@ module.exports = {
                 '提升开发体验',
             ],
             '/share/': [
-                '从 webpack 打包看前端模块化',
                 'TypeScript、Rollup 搭建工具库',
+                '从 webpack 打包看前端模块化',
             ],
             '/重学前端/': [
                 '',
