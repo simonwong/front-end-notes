@@ -7,19 +7,14 @@ install:
   - yarn
 script:
   - yarn docs:build
-after_script:
-  - cd ./docs/.vuepress/dist
-  - git init
-  - git config user.name "Simon"
-  - git config user.email "wsj_simon@163.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force "https://${GH_TOKEN}@${GH_REF}" master:master
 
-branches:
-  only:
-    - master
-
-env:
-  global:
-    - GH_REF: github.com/simonwong/simonwong.github.io.git
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: ./docs/.vuepress/dist
+  repo: simonwong/simonwong.github.io
+  target_branch: master
+  on:
+    branch: master
