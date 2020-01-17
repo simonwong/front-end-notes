@@ -4,7 +4,7 @@
 
 ## 开发
 
-### 1、iTrem - 终端
+### iTrem - 终端
 
 > 无敌好用的终端
 
@@ -18,7 +18,7 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 
 
-### 2、VSCode - 编辑器
+### VSCode - 编辑器
 
 > 无敌好用的编辑器
 
@@ -35,7 +35,7 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 
 
-### 3、Homebrew 
+### Homebrew  - 软件包管理器
 
 > macOS（或 Linux）缺失的软件包的管理器
 
@@ -49,7 +49,15 @@ brew install [appName]
 
 
 
-### 4、Charles
+### Cakebrew - 可视化homebrew
+
+> 可视化管理 homebrew 的包
+
+[官网](https://www.cakebrew.com/)
+
+
+
+### Charles
 
 > 抓包工具、代理转发请求
 
@@ -57,9 +65,11 @@ brew install [appName]
 
 [使用方式](./Charles.md)
 
+
+
 ## 协作
 
-### 1、Spark - 邮箱
+### Spark - 邮箱
 
 > 没有广告
 
@@ -69,10 +79,36 @@ brew install [appName]
 
 ## 写作
 
-### 1、Typora - markdowm 编辑工具
+### Typora - markdowm 编辑工具
 
 > 所见即所得的 Markdown 编辑工具
 
 [官网](https://typora.io/)
 
 [更多的主题选择](http://theme.typora.io/)
+
+
+
+## 效率
+
+### Xnip - 截图工具
+
+> 自带阴影效果，支持马赛克，高亮，滚动截图等等
+
+[官网](https://zh.xnipapp.com/)
+
+
+
+### uTools - 类Alfred 快速启动搜索等
+
+>  Alfred 的替代品
+
+
+
+## 系统
+
+### ThinkTool 配置 Mac 隐藏配置项
+
+> 可以配置 Mac 的隐藏配置项
+
+[官网](https://www.bresink.com/osx/TinkerTool.html)
