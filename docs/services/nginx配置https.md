@@ -1,3 +1,5 @@
+# nginx配置https
+
 ## 安装 nginx
 
 有可能你当前已经通过 `apt-get` `yum` 等命令安装了，但是可能不支持 https http2 ipv6 等功能。
