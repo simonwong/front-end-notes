@@ -27,6 +27,12 @@
     2. `cat ~/.gitconfig` 查看配置结果
     3. 配置 ssh
 
+- 修改了 github 的账号，需要修改本地仓库的配置
+    1. `git remote -v` 查看当前连接的远程仓库
+    2. `git remote rm origin` 移除 origin
+    3. `git remote add origin git@github.com:simonwong/react-universal-template.git` 重新关联
+    4. `git push --set-upstream origin master` 设置上游
+
 
 
 ## 常用操作

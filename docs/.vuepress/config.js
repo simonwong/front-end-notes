@@ -10,11 +10,11 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '日常笔记', link: '/note/' },
-            { text: '分享', link: '/share/TypeScript、Rollup 搭建工具库/' },
             { text: '前端进阶', link: '/advanced/webpack/' },
-            { text: '工具', link: '/tools/' },
             { text: '后端', link: '/backend/node基础/' },
+            { text: '服务器', link: '/services/nginx基础/' },
             { text: '计算机基础', link: '/computerbasic/进制/' },
+            { text: '工具', link: '/tools/' },
             { text: 'Github', link: 'https://github.com/simonwong' },
         ],
         sidebar: {
@@ -28,10 +28,6 @@ module.exports = {
                 '基础算法',
                 'js语言精粹',
                 '提升开发体验',
-            ],
-            '/share/': [
-                'TypeScript、Rollup 搭建工具库',
-                '从 webpack 打包看前端模块化',
             ],
             '/重学前端/': [
                 '',
@@ -51,29 +47,42 @@ module.exports = {
                         'webpack/optimization',
                     ],
                 },
+                {
+                    title: 'Git 操作指南',
+                    children: [
+                        'git/git操作指南',
+                        'git/gitlab-workflow.md',
+                        'git/mac多git账户配置',
+                    ],
+                },
                 'npm',
                 'yarn',
                 'TypeScript',
-                'nginx配置',
-                'git操作指南',
-                'gitlab-workflow.md',
-                'mac多git账户配置',
-            ],
-            // 工具
-            '/tools/': [
-                '',
-                'iTerm',
-                'Charles',
+                'TypeScript、Rollup 搭建工具库',
+                '从 webpack 打包看前端模块化',
             ],
             // 后端
             '/backend/': [
                 'node基础',
                 'mongodb',
             ],
+            // 服务器相关
+            '/services/': [
+                'nginx基础',
+                'nginx配置https',
+                'Docker基础',
+                'acme.sh证书颁发',
+            ],
             // 计算机基础
             '/computerbasic/': [
                 '进制',
                 'http',
+            ],
+            // 工具
+            '/tools/': [
+                '',
+                'iTerm',
+                'Charles',
             ],
         }
     },
