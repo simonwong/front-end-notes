@@ -22,6 +22,13 @@ module.exports = {
             '/note/': [
                 '',
                 '日常笔记',
+                {
+                    title: 'React',
+                    children: [
+                        '/React/React笔记',
+                        '/React/react hooks使用技巧',
+                    ],
+                },
                 '常用的css',
                 '构建脚手架',
                 'webapp',
@@ -71,6 +78,7 @@ module.exports = {
                 'nginx基础',
                 'nginx配置https',
                 'Docker基础',
+                'mysql使用',
                 'acme.sh证书颁发',
             ],
             // 计算机基础

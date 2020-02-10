@@ -1,6 +1,5 @@
-
-
 # React笔记
+
 ## React工作原理 ##
 
 ![](http://file.wangsijie.top/18-6-7/39311438.jpg)
