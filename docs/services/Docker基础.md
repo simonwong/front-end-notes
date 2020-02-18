@@ -2,6 +2,29 @@
 
 
 
+## 镜像加速
+
+```json
+# /etc/docker/daemon.json
+{
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com"
+  ]
+}
+```
+
+
+
+重启
+
+```powershell
+$ systemctl daemon-reload
+$ systemctl restart docker
+```
+
+
+
 ## Dockerfile
 
 ```dockerfile
@@ -140,62 +163,6 @@ docker cp mysql:/var/lib/mysql /var/own/mysqldata
 $ docker build [OPTIONS] PATH | URL | -
 ```
 
-
-
-
-
-## MySql
-
-```powershell
-$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 -v /usr/local/mysql/conf:/etc/mysql/conf.d -v /usr/local/mysql/data:/var/lib/mysql --restart=always mysql
-```
-
-`-e MYSQL_ROOT_PASSWORD=123456` 设置 root 用户密码
-
-`-d` 后台运行
-
-`-p 3306:3306` 指定端口
-
-`--restart=always` docker 重启后，容器自动启动
-
-`--privileged=true` 容器内的root拥有真正root权限，否则容器内root只是外部普通用户权限
-
-`-v ` 挂在目录
-
-
-
-mysql 的默认配置文件`/etc/mysql/my.cnf`  `/etc/mysql/conf.d`  后者是个文件夹，权限大于前者。文件夹中可以命名任意 `xxx.cnf` 来覆盖 `my.cnf`
-
-Mysql 的数据默认存放在 `/var/lib/mysql` 中
-
-
-
-进入
-
-```powershell
-# 进入容器
-$ docker exec -it mysql bash
-
-# 登陆输入上面的密码
-$ mysql -u root -p
-```
-
-
-
-远程访问权限
-
-这里需要有个用户的概念。root 用户没有开放远程访问权限。而是另外创建了一个 simon 用户，授予远程访问。
-
-```powershell
-# 添加进入到mysql容器内部才能执行命令设置远程登陆账号密码
-$ CREATE USER 'simon'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
-
-# 开启远程访问权限
-$ GRANT ALL PRIVILEGES ON *.* TO 'simon'@'%';
-
-# 刷新权限
-$ flush privileges;    
-```
 
 
 

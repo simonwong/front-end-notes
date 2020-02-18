@@ -99,6 +99,14 @@
 
 
 
+### 修改 commit
+
+`git commit --amend`
+
+`git commit --amend --author "name <email@email.com>"` 修改作者
+
+
+
 ### 撤销变更
 
 `git checkout -- file_name` 撤回更改

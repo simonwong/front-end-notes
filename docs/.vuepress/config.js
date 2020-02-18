@@ -78,7 +78,7 @@ module.exports = {
                 'nginx基础',
                 'nginx配置https',
                 'Docker基础',
-                'mysql使用',
+                'Docker上各种镜像的使用',
                 'acme.sh证书颁发',
             ],
             // 计算机基础
