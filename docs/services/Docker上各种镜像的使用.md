@@ -113,6 +113,20 @@ server {
 
 
 
+### 其他问题
+
+- 时间不对
+
+    【系统管理】=> 【脚本命令运行】
+
+    ```
+    System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
+    ```
+
+    
+
+
+
 ## MySql
 
 ```powershell
@@ -305,3 +319,29 @@ protected-mode no
 ```
 
 `daemonize no` 在Docker中后台启动一个镜像，当前台无响应时会自动退出。Redis 进程被后台化后， 启动Redis的那个进程，也就是Docker执行进程无事可做，因此Docker执行进程退出。当然如果你的Redis的配置文件中没有后台运行，就不会出现这种状况。将Redis的后台运行改为`no`，这样就完成了。
+
+
+
+## nginx
+
+`nginx:alpine` 版本
+
+```powershell
+$ docker run --name nginx_center \
+-d \
+-p 80:80 \
+-p 443:443 \
+-v /usr/local/nginx/conf.d:/etc/nginx/conf.d \
+-v /usr/local/nginx/nginx.conf:/etc/nginx/nginx.conf \
+-v /usr/local/nginx/ssl:/etc/nginx/ssl \
+--restart=always \
+nginx:alpine
+```
+
+
+
+html 默认位置在 `/usr/share/nginx/html`
+
+Log 默认位置在 `/var/log/nginx`
+
+默认使用 `/etc/nginx/conf.d/default.conf`

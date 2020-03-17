@@ -36,34 +36,6 @@ RUN npm install
 CMD node index.js
 ```
 
-
-
-## 数据挂载
-
-数据挂载有三种方式
-
-### volume
-
-是由docker默认及推荐的挂载方式，volume由docker直接管理，同一个volume可以共享给多个容器使用，volume和容器的生命周期完全独立，容器删除时volume仍然存在。
-
-缺点：volume 在宿主机上比较难定位，在宿主机上直接操作 volume 比较困难。
-
-### bind mount
-
-是直接将宿主机文件系统上的文件路径映射到容器中，两边双向同步。
-
-优点：可以直接访问，也可以被别的程序使用
-
-缺点：可以把任何文件路径使用bind mount的方式绑定到容器中，这样有可能一些安全问题。
-
-### tmpfs
-
-使用宿主机的内存作为存储，不会写到宿主机的文件系统中，和前两种区别较大。
-
-
-
-
-
 ## 常用命令
 
 ```powershell
@@ -165,4 +137,64 @@ $ docker build [OPTIONS] PATH | URL | -
 
 
 
+exapmle
 
+```powershell
+docker build -t my-image -f Dockerfile .
+```
+
+
+
+## 数据挂载
+
+数据挂载有三种方式
+
+### volume
+
+是由docker默认及推荐的挂载方式，volume由docker直接管理，同一个volume可以共享给多个容器使用，volume和容器的生命周期完全独立，容器删除时volume仍然存在。
+
+缺点：volume 在宿主机上比较难定位，在宿主机上直接操作 volume 比较困难。
+
+### bind mount
+
+是直接将宿主机文件系统上的文件路径映射到容器中，两边双向同步。
+
+优点：可以直接访问，也可以被别的程序使用
+
+缺点：可以把任何文件路径使用bind mount的方式绑定到容器中，这样有可能一些安全问题。
+
+### tmpfs
+
+使用宿主机的内存作为存储，不会写到宿主机的文件系统中，和前两种区别较大。
+
+
+
+## docker 网络
+
+### host 网络
+
+将与宿主机共享网络，不需要再使用 -p 指定暴露接口。容器暴露的端口直接暴露的宿主机上。
+
+```powershell
+# 使用 host 网络
+$ docker run -d \
+--network host \
+nginx
+```
+
+### bridge 网络
+
+默认就是 bridge 网络。docker 在宿主机上创建了 docker0 的网桥
+
+```powershell
+# 查看
+$ ip addr show docker0
+```
+
+可以发现宿主机的IP是`172.17.0.1` 。就可以在nginx 容器中，通过这个ip 反向代理到宿主机
+
+
+
+## Alpine 镜像
+
+Alpine 镜像构建的容器，进入用不了bash ，用 sh
