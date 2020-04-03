@@ -25,8 +25,8 @@ module.exports = {
                 {
                     title: 'React',
                     children: [
-                        '/React/React笔记',
-                        '/React/react hooks使用技巧',
+                        'React/React笔记',
+                        'React/react hooks使用技巧',
                     ],
                 },
                 '常用的css',
@@ -72,6 +72,7 @@ module.exports = {
             // 后端
             '/backend/': [
                 'node基础',
+                '服务性能调优',
                 'mongodb',
             ],
             // 服务器相关
@@ -84,6 +85,16 @@ module.exports = {
             ],
             // 计算机基础
             '/computerbasic/': [
+                {
+                    title: '数据结构与算法分析',
+                    children: [
+                        '数据结构与算法分析/',
+                        '数据结构与算法分析/复杂度分析',
+                        '数据结构与算法分析/数据结构',
+                        '数据结构与算法分析/排序算法',
+                    ],
+                },
+                '',
                 '进制',
                 'http',
             ],
