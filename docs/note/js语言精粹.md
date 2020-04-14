@@ -52,7 +52,7 @@ var a = b = c = {};
 创建一个使用原对象使用其原型的新对象
 
 ```js
-if (typeof Object.beget !== 'function') {
+if (typeof Object.create !== 'function') {
     Object.create = function (o) {
         var F = function () {};
         F.prototype = o;
