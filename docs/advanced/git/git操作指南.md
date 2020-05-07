@@ -35,6 +35,10 @@
 
 
 
+- 覆盖上一次commit
+    1. `git commit --amend`
+    2. `git commit --amend --reset-author` 
+
 ## 常用操作
 
 
