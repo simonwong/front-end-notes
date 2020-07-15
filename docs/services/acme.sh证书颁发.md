@@ -1,6 +1,6 @@
 #  acme.sh 证书颁发
 
-[acme.sh 中文 wiki]([https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E](https://github.com/Neilpang/acme.sh/wiki/说明))
+[acme.sh 中文 wiki](https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
 
 [使用 acme.sh 部署 Let's Encrypt 通过阿里云 DNS 验证方式实现泛域名 HTTPS](https://f-e-d.club/topic/use-acme-sh-deployment-let-s-encrypt-by-ali-cloud-dns-generic-domain-https-authentication.article)
 
@@ -67,8 +67,14 @@ acme.sh  --installcert  -d  <domain>.com
 ```
 
 ```shell
-acme.sh  --installcert  -d  wangsijie.top --key-file   /usr/local/nginx/conf/ssl/wangsijie.top.key --fullchain-file /usr/local/nginx/conf/ssl/fullchain.cer --reloadcmd  "service nginx force-reload"
+acme.sh --installcert \
+-d  wangsijie.top \
+--key-file    /usr/local/nginx/ssl/wangsijie.top.key \
+--fullchain-file /usr/local/nginx/ssl/fullchain.cer \
+--reloadcmd  "service nginx force-reload"
 ```
+
+reloadcmd 相当于一个重启的钩子，当证书更新后，需要重启你的 nginx 或者 docker 服务，你需要自己配置对应的命令
 
 
 

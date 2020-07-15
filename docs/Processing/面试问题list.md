@@ -9,6 +9,8 @@
     - 清除浮动
     - 阻止被浮动元素覆盖
 
+- 实现，正方形在页面中自适应展示，一行只展示三个，多了自动换行
+
 ## JS
 
 - 闭包
@@ -17,11 +19,12 @@
 - async await
 - setTimeout 、setInterval 计时不准
     - 递归执行 setTimeout ，每个下一次的 setTimeout 执行时机应该通过 当前时间不断修正，来达到尽量的精准性。
-
 - 防抖、节流
 - 深拷贝的实现
     - `JSON.stringify()` 有什么缺点(引用类型、函数、循环引用、undefined)
-    - 
+- 对于类而言，箭头函数和类普通函数、constructor 里 bind 的函数有什么区别
+    - class 会把用 = 号声明的方法、变量作为实例的属性
+    - 非 = 号声明的，则是放在原型链上。
 
 ## 浏览器
 
@@ -36,8 +39,9 @@
     - 简单请求：get、post、head。仅仅包含 `accept`、`content-language` 等，`content-type` 只限三个值
     - 复杂请求：put、delete 。不仅包含上述头信息，`content-type='application/json'` 等超出限制
 - 如何避免 option 请求
-    - 后端响应头部设置 `Access-Control-Max-Age` 缓存起来
-
+  
+- 后端响应头部设置 `Access-Control-Max-Age` 缓存起来
+  
 - 事件循环
 
     - 微任务优先宏任务执行
@@ -63,6 +67,7 @@
         - 使用 `Cache-Control: max-age=31536000` 配合策略缓存使用，然后对文件进行指纹处理。一旦变动立即下载。
 
 - 浏览器解析过程
+  
     - 解析 html dom 树 =>  解析 css dom 树 => 合成 render 树 => 布局render树 => 绘制render树
 - 回流重绘？怎么优化？
 

@@ -53,8 +53,8 @@ div {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
-```
 
+```
 
 ## meta 标签
 
@@ -106,3 +106,28 @@ html {
     width: 0.28rem; /*如果在iphone5上(宽度320)，结果为14px*/
 }
 ```
+
+
+
+## 一些点
+
+### 数字键盘呼出
+
+```
+<input type="number" pattern="[0-9]*" />
+```
+
+
+
+### ios 光标过长
+
+固定 ine-height 高度
+
+
+
+### ios placeholder 不居中
+
+```css
+line-height: normal;
+```
+

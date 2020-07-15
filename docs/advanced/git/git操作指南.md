@@ -1,4 +1,4 @@
-# `git`操作指南
+# `agit`操作指南
 
 
 
@@ -41,13 +41,13 @@
 
 ## 常用操作
 
-
-
 ### 远程仓库
 
 `git remote add origin git@server-name:path/repo-name.git` 关联远程仓库
 
 `git push -u origin master` 第一次关联后的推送
+
+`git push -u origin HEAD` 关联分支
 
 `git push origin <分支名> --force` commit 撤回后，推送。用来撤回线上的 commit push
 
@@ -59,7 +59,11 @@
 
 `git reflog`记录了每一次命令
 
-
+```
+在命令行输入git reflog，会出现丢失的commit信息列
+找到自己需要的commit行， git checkout -b recovery q1dw23d
+git checkout master git merge recovery 切回主分支
+```
 
 ### 分支
 
