@@ -3,10 +3,10 @@ node_js:
   - "10"
 
 install:
-  - npm install -g yarn
-  - yarn
+  - yarn --frozen-lockfile
 script:
   - yarn docs:build
+catche: yarn
 
 deploy:
   provider: pages
