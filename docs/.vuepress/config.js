@@ -5,7 +5,8 @@ module.exports = {
     title: '王思杰的前端笔记',
     description: '分享日常总结，工具框架的使用以及整理',
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'icon', href: '/logo.png' }],
+        ['meta', { ['http-equiv']: 'cache-control', content: 'no-cache' }],
     ],
     themeConfig: {
         nav: [
