@@ -253,6 +253,20 @@ textarea {
 
 
 
+## 兼容
+
+### IOS 的 `input:disabled` 样式
+
+```css
+input:disabled {
+    -webkit-text-fill-color: @text-color;
+    color: @text-color;
+    opacity: 1;
+}
+```
+
+
+
 ## Sass / Less
 
 

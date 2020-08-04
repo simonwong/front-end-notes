@@ -35,7 +35,11 @@ module.exports = {
                 '基础算法',
                 'js语言精粹',
                 '提升开发体验',
-                'taro的使用心得',
+                'webpack4-note',
+                'taro-note',
+                'umi-note',
+                'AppleScript-note',
+                'npm-package-note',
             ],
             '/重学前端/': [
                 '',
@@ -82,6 +86,8 @@ module.exports = {
                 'Docker基础',
                 'Docker上各种镜像的使用',
                 'acme.sh证书颁发',
+                'mysql使用',
+                'vim常用命令',
             ],
             // 计算机基础
             '/computerbasic/': [
