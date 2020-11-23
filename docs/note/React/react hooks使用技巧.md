@@ -44,3 +44,70 @@ function useDoubleClick () {
 }
 ```
 
+
+
+### 接口请求封装
+
+```js
+export function useFetch = (config, deps) => {
+  const abortController = new AbortController()
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState()
+
+  useEffect(() => {
+    setLoading(true)
+    fetch({
+      ...config,
+      signal: abortController.signal
+    })
+      .then((res) => setResult(res))
+      .finally(() => setLoading(false))
+  }, deps)
+
+  useEffect(() => {
+    return () => abortController.abort()
+  }, [])
+
+  return { result, loading }
+}
+```
+
+
+
+### URL 数据仓库
+
+```js
+export function useQuery() {
+  const history = useHistory();
+  const { search, pathname } = useLocation();
+  // 保存query状态
+  const queryState = useRef(qs.parse(search));
+  // 设置query
+  const setQuery = handler => {
+    const nextQuery = handler(queryState.current);
+    queryState.current = nextQuery;
+    // replace会使组件重新渲染
+    history.replace({
+      pathname: pathname,
+      search: qs.stringify(nextQuery),
+    });
+  };
+  return [queryState.current, setQuery];
+}
+
+const [query, setQuery] = useQuery();
+
+// 接口请求依赖 page 和 size
+useEffect(() => {
+  api.getUsers();
+}, [query.page, query, size]);
+
+// 分页改变 触发接口重新请求
+const onPageChange = page => {
+  setQuery(prevQuery => ({
+    ...prevQuery,
+    page,
+  }));
+};
+```
+
