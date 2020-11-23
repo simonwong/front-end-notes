@@ -203,6 +203,46 @@ pointer-events: auto; 默认
 
 
 
+### 0.5px 最佳方案
+
+```css
+.border-base() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5, 0.5);
+  transform-origin: 0 0;
+  content: '';
+  pointer-events: none;
+}
+
+.border-bottom-1px {
+  position: relative;
+
+  &::after {
+    .border-base();
+
+    border-bottom: 1px solid @border-color-base;
+  }
+}
+
+.border-1px(@radius: 0px) {
+  position: relative;
+
+  &::after {
+    .border-base();
+
+    border: 1px solid @border-color-base;
+    border-radius: @radius;
+  }
+}
+```
+
+
+
 
 
 ##  优化

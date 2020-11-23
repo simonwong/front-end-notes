@@ -345,3 +345,97 @@ html 默认位置在 `/usr/share/nginx/html`
 Log 默认位置在 `/var/log/nginx`
 
 默认使用 `/etc/nginx/conf.d/default.conf`
+
+
+
+## Elasticsearch 集群
+
+修改系统设置 `/etc/sysctl.conf`
+
+```conf
+vm.max_map_count=262144
+#...
+```
+
+执行 `sysctl -p` 来使得配置生效
+
+
+
+参考 https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html
+
+
+
+配置文件 es/docker-compose.yml
+
+```yaml
+version: '3'
+services:
+  es01:
+    image: elasticsearch:7.9.1
+    container_name: yueqing_es01
+    environment:
+      - node.name=es01
+      - cluster.name=es-docker-cluster
+      - network.bind_host=0.0.0.0
+      - discovery.seed_hosts=es02
+      - cluster.initial_master_nodes=es01,es02
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+  es02:
+    image: elasticsearch:7.9.1
+    container_name: yueqing_es02
+    environment:
+      - node.name=es02
+      - cluster.name=es-docker-cluster
+      - network.bind_host=0.0.0.0
+      - discovery.seed_hosts=es01
+      - cluster.initial_master_nodes=es01,es02
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data02:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+  kibana:
+    image: kibana:7.9.1
+    container_name: yueqing_kibana
+    restart: always
+    ports:
+      - 5601:5601
+    environment:
+      I18N_LOCALE: zh-CN
+      ELASTICSEARCH_URL: http://es01:9200
+      ELASTICSEARCH_HOSTS: http://es01:9200
+    # volumes:
+      # - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    networks:
+      - elastic
+volumes:
+  data01:
+    driver: local
+  data02:
+    driver: local
+networks:
+  elastic:
+    external: true
+    driver: bridge
+
+```
+
+
+
+执行 `docker-compose up -d` 启动集群

@@ -5,7 +5,8 @@ module.exports = {
     title: '王思杰的前端笔记',
     description: '分享日常总结，工具框架的使用以及整理',
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'icon', href: '/logo.png' }],
+        ['meta', { ['http-equiv']: 'cache-control', content: 'no-cache' }],
     ],
     themeConfig: {
         nav: [
@@ -13,7 +14,7 @@ module.exports = {
             { text: '前端进阶', link: '/advanced/webpack/' },
             { text: '后端', link: '/backend/node基础/' },
             { text: '服务器', link: '/services/nginx基础/' },
-            { text: '计算机基础', link: '/computerbasic/进制/' },
+            { text: '计算机基础', link: '/computerbasic/数据结构与算法分析/' },
             { text: '工具', link: '/tools/' },
             { text: 'Github', link: 'https://github.com/simonwong' },
         ],
@@ -29,17 +30,25 @@ module.exports = {
                         'React/react hooks使用技巧',
                     ],
                 },
+                {
+                    title: 'React 源码分析',
+                    children: [
+                        'react源码分析/',
+                        'react源码分析/ReactDOM.render过程',
+                    ],
+                },
                 '常用的css',
                 '构建脚手架',
                 'webapp',
-                '基础算法',
                 'js语言精粹',
                 '提升开发体验',
                 'webpack4-note',
-                'taro-note',
+                'typescript-note',
                 'umi-note',
-                'AppleScript-note',
                 'npm-package-note',
+                'taro-note',
+                'AppleScript-note',
+                'macbook-note',
             ],
             '/重学前端/': [
                 '',

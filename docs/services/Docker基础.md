@@ -51,6 +51,7 @@ docker rmi 镜像id                                 // 删除镜像
 docker rmi REPOSITORY/TAR                        // 删除镜像 例：docker rmi button-api/v2                        
 docker stop 容器ID/容器别名                        // 关闭一个已启动容器 
 docker start 容器ID/容器别名                       // 启动一个关闭的容器 
+docker restart 容器ID/容器别名                     // 重启容器 
 docker inspect 容器ID/容器别名                     // 查看一个容器的详情 
 docker exec -it 容器ID/容器别名 /bin/bash          // 进入容器内部
 ```
