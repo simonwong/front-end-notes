@@ -11,6 +11,19 @@
 
 - 实现，正方形在页面中自适应展示，一行只展示三个，多了自动换行
 
+    ```css
+    .outter {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .inner {
+        flex: 0 0 33%;
+        padding-bottom: 33%;
+    }
+    ```
+
+    
+
 ## JS
 
 - 闭包
@@ -87,6 +100,7 @@
 - 为什么文件顶部必须要 import React 呢
     - 因为 `React.createElement`
 
+- react 组件之间有哪些通信方式
 - setState 什么时候同步什么时候异步
 
     - 由 React 引发事件处理函数（合成事件、钩子函数等），会调用 bathedUpdated ，isBatchingUpdateds -> true 异步
@@ -119,6 +133,14 @@
 ### redux
 
 - dispatch 做了什么
+
+
+
+### 优化
+
+- React 项目有哪些可以优化的点，实际项目中你是怎么处理的
+
+
 
 ## Vue
 
