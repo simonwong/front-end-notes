@@ -1,4 +1,9 @@
-const moment = require('moment')
+const dayjs = require('dayjs')
+const relativeTime = require('dayjs/plugin/relativeTime')
+require('dayjs/locale/zh-cn')
+
+dayjs.extend(relativeTime)
+dayjs.locale('zh-cn')
 
 module.exports = {
     base: '/',
@@ -60,7 +65,6 @@ module.exports = {
                 'webpack4-note',
                 'typescript-note',
                 'umi-note',
-                'taro-note',
                 'AppleScript-note',
                 'macbook-note',
             ],
@@ -132,13 +136,22 @@ module.exports = {
             ],
         }
     },
+    locales: {
+        '/': {
+            lang: 'zh-CN',
+        },
+    },
     plugins: [
         ['@vuepress/back-to-top', true],
+        ['@vuepress/pwa', {
+            serviceWorker: true,
+            updatePopup: true
+        }],
         [
             '@vuepress/last-updated',
             {
                 transformer: (timestamp, lang) => {
-                    return moment(timestamp).fromNow()
+                    return dayjs(timestamp).fromNow()
                 }
             }
         ],
