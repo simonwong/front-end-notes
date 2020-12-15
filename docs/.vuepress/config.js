@@ -32,7 +32,7 @@ module.exports = {
                     title: 'React',
                     children: [
                         'React/React笔记',
-                        'React/react hooks使用技巧',
+                        'React/react-hooks使用技巧',
                     ],
                 },
                 {

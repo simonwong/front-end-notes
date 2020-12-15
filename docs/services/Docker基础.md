@@ -60,15 +60,15 @@ docker exec -it 容器ID/容器别名 /bin/bash          // 进入容器内部
 
 ### image
 
-- docker image ls
+- `docker image ls`
 
-- docker image rm [option] <imageid>
+- `docker image rm [option] <imageid>`
 
 
 
 ### container
 
-- docker container start 
+- `docker container start`
 
     生成/启动容器，但不会重复生成容器；；； docker container run 会重复生成
 
@@ -88,7 +88,7 @@ $ docker container start [containerID]
 
 
 
-- docker container stop 
+- `docker container stop`
 
     终止容器运行，相当于先发起 SIGTERM 信号，过段时间再发出 SIGKILL；；docker container kill 会直接发出 sigkill
 
@@ -98,7 +98,7 @@ $ docker container stop [containerID]
 
 
 
-- docker container exec
+- `docker container exec`
 
     进入一个正在运行的 docker 容器
 
@@ -110,7 +110,7 @@ $ docker container exec -it [containerID] bash
 
 
 
-- docker container cp
+- `docker container cp`
 
     从正在运行的 Docker 容器里，将文件拷贝到本机
 
