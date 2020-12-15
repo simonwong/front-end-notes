@@ -37,6 +37,21 @@ module.exports = {
                         'react源码分析/ReactDOM.render过程',
                     ],
                 },
+                {
+                    title: 'NPM',
+                    children: [
+                        'NPM/npm基础',
+                        'NPM/npm机制',
+                        'NPM/npm包开发',
+                        'NPM/yarn',
+                    ],
+                },
+                {
+                    title: '小程序',
+                    children: [
+                        'applet/taro',
+                    ],
+                },
                 '常用的css',
                 '构建脚手架',
                 'webapp',
@@ -45,7 +60,6 @@ module.exports = {
                 'webpack4-note',
                 'typescript-note',
                 'umi-note',
-                'npm-package-note',
                 'taro-note',
                 'AppleScript-note',
                 'macbook-note',
@@ -76,8 +90,6 @@ module.exports = {
                         'git/mac多git账户配置',
                     ],
                 },
-                'npm',
-                'yarn',
                 'TypeScript',
                 'TypeScript、Rollup 搭建工具库',
                 '从 webpack 打包看前端模块化',

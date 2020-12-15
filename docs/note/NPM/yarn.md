@@ -3,7 +3,7 @@
 ## 解决了哪些 npm 问题 ##
 
 - yarn 缓存了每次你下载的模块
--  yarn 可以通过并行的网络请求最大限度利用网络资源
+- yarn 可以通过并行的网络请求最大限度利用网络资源
 - yarn 在开始安装一个包之前会先用 checksums 来验证，你不用担心本地的缓存的包被破坏了导致安装失败
 - ...
 
@@ -34,12 +34,4 @@ yarn config get registry # 查看当前下载源,初始为https://registry.yarnp
 yarn config set registry https://registry.npm.taobao.org -g # 更改为淘宝
 yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
 ```
-
-
-
-## 相关 ##
-
-- 项目中只用一种包管理器 npm / yarn
-
-- 总是应该提交依赖锁文件 yarn.lock 、package-lock.json
 

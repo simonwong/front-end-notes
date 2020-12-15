@@ -67,6 +67,25 @@ aside .module {
 
 
 
+### Img 元素在正方形自适应高宽且居中
+
+```css
+.wrapper {
+    width: 100px;
+    height: 100px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+```
+
+
+
+
+
 ## 技巧
 
 ### 继承 `box-sizing`
