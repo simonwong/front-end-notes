@@ -1,5 +1,21 @@
 # yarn
 
+## 安装过程
+
+检测（checking）→ 解析包（Resolving Packages） → 获取包（Fetching Packages）→ 链接包（Linking Packages）→ 构建包（Building Packages）
+
+
+
+### 获取包
+
+不过 Yarn 默认 prefer-online 模式，即优先使用网络数据。如果网络数据请求失败，再去请求缓存数据。
+
+Yarn 会根据 cacheFolder+slug+node_modules+pkg.name 生成一个 path，判断系统中是否存在该 path，如果存在证明已经有缓存，不用重新下载。这个 path 也就是依赖包缓存的具体路径。
+
+
+
+
+
 ## 解决了哪些 npm 问题 ##
 
 - yarn 缓存了每次你下载的模块
@@ -22,6 +38,8 @@ yarn upgrade --latest # 升级package.json指定的所有依赖包,但忽略pack
 yarn outdated # 列出包的所有依赖项的版本信息。此信息包括当前安装的版本、基于语义版本所需的版本和最新的可用版本
 yarn run # 列出包里所有可运行的脚本
 yarn run dev # 运行package.json中scripts定义的脚本命令,等同于 npm runx
+
+yarn global list --depth=0 # 查看全局安装的包
 ```
 
 

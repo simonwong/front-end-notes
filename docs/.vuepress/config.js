@@ -16,11 +16,12 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '日常笔记', link: '/note/' },
-            { text: '前端进阶', link: '/advanced/webpack/' },
-            { text: '后端', link: '/backend/node基础/' },
-            { text: '服务器', link: '/services/nginx基础/' },
-            { text: '计算机基础', link: '/computerbasic/数据结构与算法分析/' },
+            { text: '前端进阶', link: '/advanced/' },
+            { text: '后端', link: '/backend/' },
+            { text: '服务器', link: '/services/' },
+            { text: '计算机基础', link: '/computerbasic/' },
             { text: '工具', link: '/tools/' },
+            { text: '杂乱/分享', link: '/share/' },
             { text: 'Github', link: 'https://github.com/simonwong' },
         ],
         sidebar: {
@@ -33,13 +34,6 @@ module.exports = {
                     children: [
                         'React/React笔记',
                         'React/react-hooks使用技巧',
-                    ],
-                },
-                {
-                    title: 'React 源码分析',
-                    children: [
-                        'react源码分析/',
-                        'react源码分析/ReactDOM.render过程',
                     ],
                 },
                 {
@@ -58,7 +52,6 @@ module.exports = {
                     ],
                 },
                 '常用的css',
-                '构建脚手架',
                 'webapp',
                 'js语言精粹',
                 '提升开发体验',
@@ -68,16 +61,16 @@ module.exports = {
                 'AppleScript-note',
                 'macbook-note',
             ],
-            '/重学前端/': [
-                '',
-                'html',
-                'css',
-                'javascript',
-                'browser',
-                'engineering-practice',
-            ],
             // 前端进阶
             '/advanced/': [
+                '',
+                {
+                    title: 'React 源码分析',
+                    children: [
+                        'react源码分析/',
+                        'react源码分析/ReactDOM.render过程',
+                    ],
+                },
                 {
                     title: 'Webpack',
                     children: [
@@ -86,6 +79,18 @@ module.exports = {
                         'webpack/optimization',
                     ],
                 },
+                '构建脚手架',
+            ],
+            // 后端
+            '/backend/': [
+                '',
+                'node基础',
+                '服务性能调优',
+                'mongodb',
+            ],
+            // 服务器相关
+            '/services/': [
+                '',
                 {
                     title: 'Git 操作指南',
                     children: [
@@ -94,18 +99,6 @@ module.exports = {
                         'git/mac多git账户配置',
                     ],
                 },
-                'TypeScript',
-                'TypeScript、Rollup 搭建工具库',
-                '从 webpack 打包看前端模块化',
-            ],
-            // 后端
-            '/backend/': [
-                'node基础',
-                '服务性能调优',
-                'mongodb',
-            ],
-            // 服务器相关
-            '/services/': [
                 'nginx基础',
                 'nginx配置https',
                 'Docker基础',
@@ -116,6 +109,7 @@ module.exports = {
             ],
             // 计算机基础
             '/computerbasic/': [
+                '',
                 {
                     title: '数据结构与算法分析',
                     children: [
@@ -133,6 +127,33 @@ module.exports = {
                 '',
                 'iTerm',
                 'Charles',
+            ],
+            // 杂乱/分享
+            '/share/': [
+                '',
+                {
+                    title: '重学前端',
+                    children: [
+                        '重学前端/',
+                        '重学前端/html',
+                        '重学前端/css',
+                        '重学前端/javascript',
+                        '重学前端/browser',
+                        '重学前端/engineering-practice',
+                    ],
+                },
+                'TypeScript、Rollup搭建工具库',
+                '从webpack打包看前端模块化',
+                'ReactFiber架构浅析',
+                'React性能优化方案',
+                'TCP协议',
+                '函数式编程之柯里化',
+                '多版本包依赖问题探讨',
+                '常见的函数组合',
+                '算法分享递归到树到动态规划',
+                '纯函数',
+                '规范',
+                '调用堆栈',
             ],
         }
     },

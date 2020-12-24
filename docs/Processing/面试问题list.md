@@ -47,11 +47,15 @@
     - nginx 反向代理接口跨域
     - Postmessage 
     - Domain
-- 跨域，为什么会有 option 请求
+    
+- 跨域，为什么会有 options 请求
     - 预检请求，获知服务器是否允许跨域
     - 简单请求：get、post、head。仅仅包含 `accept`、`content-language` 等，`content-type` 只限三个值
     - 复杂请求：put、delete 。不仅包含上述头信息，`content-type='application/json'` 等超出限制
-- 如何避免 option 请求
+    
+- 如何避免 options 请求
+  
+  - 服务端带上 Access-Control-Max-Age 来缓存 options 请求
   
 - 后端响应头部设置 `Access-Control-Max-Age` 缓存起来
   
@@ -82,6 +86,7 @@
 - 浏览器解析过程
   
     - 解析 html dom 树 =>  解析 css dom 树 => 合成 render 树 => 布局render树 => 绘制render树
+    
 - 回流重绘？怎么优化？
 
 
