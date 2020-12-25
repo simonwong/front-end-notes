@@ -25,12 +25,9 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 插件推荐
 
-- vscode-icons
-- code runner
-- ESLint
 - GitLens
-- TODO Highlight
-- EditorConfig
+- Todo tree
+- Code Spell Checker
 - ...
 
 
@@ -47,11 +44,8 @@ brew install [appName]
 ```
 
 
-### Cakebrew - 可视化homebrew
 
-> 可视化管理 homebrew 的包
-
-[官网](https://www.cakebrew.com/)
+另外有个可视化工具 [Cakebrew](https://www.cakebrew.com/) ，也不错
 
 
 
@@ -74,12 +68,26 @@ brew install [appName]
 
 [更多的主题选择](http://theme.typora.io/)
 
+遗憾的是没有同步功能，只能手动用 github 、或者 iCloud 等同步文件。
+
 
 ### Bear - 非常简洁的云笔记
 
 > 可惜云同步要付费，没法白嫖
 
 [官网](https://bear.app/cn/)
+
+### Notion - 丰富多样的模板/区块的云笔记
+
+[官网](https://www.notion.so)
+
+好不容易从印象笔记和 Bear 迁移到 Notion ，真香。
+
+方便的制作需求列表，旅游规划，目标定制等等。
+
+（不过 Markdown 写作我还是用 Typora ，真的 Markdown 软件一个能打的都没有啊）
+
+
 
 
 ## 效率
@@ -92,11 +100,20 @@ brew install [appName]
 
 
 
-### uTools - 类Alfred 快速启动搜索等
+### Alfred - 快速启动
 
->  Alfred 的替代品
+>  这个应该是 Mac 必备的软件了吧
 
 [官网](https://www.u.tools/)
+
+
+
+顺便安利下自己写的两个 workflow [仓库地址](https://github.com/simonwong/alfred-workflows)
+
+- 获取 VSCode 最近的文件/工作区，并快速打开 [下载](https://github.com/simonwong/alfred-workflows/releases/tag/v0.0.2)
+- 获取当前局域网 IP [下载](https://github.com/simonwong/alfred-workflows/releases/tag/0.0.1)
+
+
 
 
 ### Gifox - gif 制作工具
@@ -106,11 +123,15 @@ brew install [appName]
 [官网](https://gifox.io/)
 
 
+
+
 ### Spark - 邮箱
 
 > 没有广告
 
 [下载](https://apps.apple.com/us/app/spark-email-app-by-readdle/id1176895641)
+
+
 
 
 ## 系统
@@ -133,3 +154,4 @@ brew install [appName]
 > 可以设置触控板默认，鼠标滚轮反向滚动
 
 [官网](https://pilotmoon.com/scrollreverser/)
+
