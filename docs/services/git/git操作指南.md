@@ -41,7 +41,7 @@
 
 ## 常用操作
 
-### 远程仓库
+### 远程仓库a
 
 `git remote add origin git@server-name:path/repo-name.git` 关联远程仓库
 
