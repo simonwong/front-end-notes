@@ -37,15 +37,7 @@ Windows 下推荐[Cmder](https://cmder.net/)
 
 [官网](https://brew.sh/index_zh-cn)
 
-```bash
-brew search [appName]
-brew info [appName]
-brew install [appName]
-```
-
-
-
-另外有个可视化工具 [Cakebrew](https://www.cakebrew.com/) ，也不错
+[Homebrew 的使用指南](./Homebrew.md)
 
 
 
