@@ -60,6 +60,7 @@ module.exports = {
                 'umi-note',
                 'AppleScript-note',
                 'macbook-note',
+                '日常笔记2018-2020',
             ],
             // 前端进阶
             '/advanced/': [
@@ -127,6 +128,7 @@ module.exports = {
                 '',
                 'iTerm',
                 'Charles',
+                'Homebrew',
             ],
             // 杂乱/分享
             '/share/': [
