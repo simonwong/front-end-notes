@@ -1,4 +1,4 @@
-# `git`操作指南
+# Git 操作指南
 
 
 
@@ -38,6 +38,16 @@
 - 覆盖上一次commit
     1. `git commit --amend`
     2. `git commit --amend --reset-author` 
+
+
+
+- fork 后，如何与原仓库同步
+  1. `git remove -v` 查看远程仓库的路径，如果没有 `upstream` （上游代码库），继续
+  2. `git remote add upstream [git 地址]` 向本地添加上游代码库
+  3. 查看本地有没有需改，该 stash stash ，该 push push
+  4. `git fetch upstream` 更新上游仓库
+  5. 切到你要的分支 master 或者 feature 啥的，然后 `git merge upstream/master` （其实我有点担心会有 merge 节点，试了一次没有，如果有 merge 节点，可以试试 reabse）
+  6. `git push`
 
 ## 常用操作
 

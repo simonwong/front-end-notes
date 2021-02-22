@@ -98,3 +98,15 @@ open .
 ### 参考
 
 https://segmentfault.com/a/1190000014992947#articleHeader0
+
+
+
+## 一些好用的配置
+
+### 像输入文本一样输入命令行
+
+- 解决 fn + 方向键显示特殊符号的问题
+- 解决 command + delete 等快速删除的问题
+
+Preferences > Profiles > Keys 选择 Natural Text Editing
+
