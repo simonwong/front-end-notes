@@ -29,6 +29,7 @@ Yarn 会根据 cacheFolder+slug+node_modules+pkg.name 生成一个 path，判断
 ```shell
 yarn init # npm init
 yarn # npm install
+yarn install --frozen-lockfile # npm ci
 yarn add react # npm i -S react
 yarn add -D webpack # npm i -D webpack
 yarn global add babel # npm i -g babel
@@ -42,7 +43,21 @@ yarn run dev # 运行package.json中scripts定义的脚本命令,等同于 npm r
 yarn global list --depth=0 # 查看全局安装的包
 ```
 
+### global
 
+- **查看全局安装包**
+
+```shell
+yarn global list --depth=0
+```
+
+- **移除全局安装包**
+
+```shell
+yarn global remove xxx
+```
+
+### config
 
 ```shell
 yarn config list # 查看config
@@ -51,5 +66,20 @@ yarn config get registry # 查看当前下载源,初始为https://registry.yarnp
 
 yarn config set registry https://registry.npm.taobao.org -g # 更改为淘宝
 yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+```
+
+
+
+### create
+
+```shell
+yarn create react-app my-app
+```
+
+相当于执行了
+
+```powershell
+yarn global add create-react-app
+create-react-app my-app
 ```
 

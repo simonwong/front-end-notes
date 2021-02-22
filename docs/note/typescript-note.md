@@ -3,9 +3,7 @@
 
 ## 技巧
 
-以对象的 key 作为联合类型
-
-
+### 以对象的 key 作为联合类型
 
 ```typescript
 const typeMap = {
@@ -19,9 +17,7 @@ type Typekey = keyof typeof typeMap
 
 
 
-以对象的 value 作为联合类型
-
-
+### 以对象的 value 作为联合类型
 
 ```ts
 type ValueOf<T> = T[keyof T]
@@ -35,7 +31,32 @@ const typeMap = {
 type TypeValue = ValueOf<typeof typeMap>
 ```
 
-# TypeScript
+
+
+## 常见问题
+
+### ESNext 编译成 CommonJS
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2015"
+  },
+}
+```
+
+### ts 检测三方库 types 报错
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+}
+```
 
 
 

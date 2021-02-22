@@ -51,6 +51,13 @@ module.exports = {
                         'applet/taro',
                     ],
                 },
+                {
+                    title: 'Just JavaScript',
+                    children: [
+                        'justjavascript/',
+                        'justjavascript/01.mental-models',
+                    ],
+                },
                 '常用的css',
                 'webapp',
                 'js语言精粹',
