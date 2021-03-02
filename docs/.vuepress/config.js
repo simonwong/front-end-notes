@@ -56,6 +56,8 @@ module.exports = {
                     children: [
                         'justjavascript/',
                         'justjavascript/01.mental-models',
+                        'justjavascript/02.the-javascript-universe',
+                        'justjavascript/03.values-and-variables',
                     ],
                 },
                 '常用的css',
