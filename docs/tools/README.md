@@ -105,6 +105,8 @@ Windows 下推荐[Cmder](https://cmder.net/)
 - 获取 VSCode 最近的文件/工作区，并快速打开 [下载](https://github.com/simonwong/alfred-workflows/releases/tag/v0.0.2)
 - 获取当前局域网 IP [下载](https://github.com/simonwong/alfred-workflows/releases/tag/0.0.1)
 
+国产替代品 [uTools](https://u.tools)
+
 
 
 
@@ -124,6 +126,22 @@ Windows 下推荐[Cmder](https://cmder.net/)
 [下载](https://apps.apple.com/us/app/spark-email-app-by-readdle/id1176895641)
 
 
+
+### Bob - 免费开源的划词翻译、截图翻译软件
+
+[github 地址](https://github.com/ripperhe/Bob)
+
+需要手动配置翻译 API => [教程](https://ripperhe.gitee.io/bob/#/)
+
+
+
+### 1Password - 全平台同步的密码管理器
+
+>  这个东西很好用，缺点就是太贵了。
+
+[官网](https://1password.com/)
+
+免费开源的替代品：[bitwarden](https://bitwarden.com/)
 
 
 ## 系统
