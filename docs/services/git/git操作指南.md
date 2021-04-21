@@ -174,7 +174,7 @@ squash 将这个 commit 压缩
 
 
 
-r
+p
 
 s
 

@@ -39,22 +39,42 @@ CMD node index.js
 ## 常用命令
 
 ```powershell
-service docker start                             // 开启docker服务
-systemctl start docker                           // 启动 docker 后台服务
-systemctl daemon-reload                          // 重启docker守护进程
-systemctl restart docker                         // 重启docker服务
-docker pull jenkins/jenkins                      // docker拉取镜像
-docker images                                    // 查看镜像列表
-docker ps -a                                     // 查看容器,不加-a查看正在运行的，加上-a查看所有容器
-docker rm 容器id                                  // 删除容器
-docker rmi 镜像id                                 // 删除镜像
-docker rmi REPOSITORY/TAR                        // 删除镜像 例：docker rmi button-api/v2                        
-docker stop 容器ID/容器别名                        // 关闭一个已启动容器 
-docker start 容器ID/容器别名                       // 启动一个关闭的容器 
-docker restart 容器ID/容器别名                     // 重启容器 
-docker inspect 容器ID/容器别名                     // 查看一个容器的详情 
-docker exec -it 容器ID/容器别名 /bin/bash          // 进入容器内部
+service docker start                             # 开启docker服务
+systemctl start docker                           # 启动 docker 后台服务
+systemctl daemon-reload                          # 重启docker守护进程
+systemctl restart docker                         # 重启docker服务
+docker pull jenkins/jenkins                      # docker拉取镜像
+docker images                                    # 查看镜像列表
+docker ps -a                                     # 查看容器,不加-a查看正在运行的，加上-a查看所有容器                   
+docker stop [container ID/alias]                 # 关闭一个已启动容器 
+docker start [container ID/alias]                 # 启动一个关闭的容器 
+docker restart [container ID/alias]              # 重启容器 
+docker inspect [container ID/alias]              #/ 查看一个容器的详情 
+docker exec -it [container ID/alias] /bin/bash    # 进入容器内部
+docker logs [container ID/alias]
 ```
+
+
+
+### 资源清理命令
+
+```powershell
+docker rm [container id]                         # 删除容器
+docker rmi [image id]                            # 删除镜像
+docker rmi REPOSITORY/TAR                        # 删除镜像 例：docker rmi button-api/v2     
+```
+
+```powershell
+docker container prune # 删除所有退出状态的容器
+docker volume prune # 删除未被使用的数据卷
+docker image prune # 删除 dangling 或所有未被使用的镜像
+
+docker system prune #删除已停止的容器、dangling 镜像、未被容器引用的 network 和构建过程中的 cache
+# 安全起见，这个命令默认不会删除那些未被任何容器引用的数据卷，如果需要同时删除这些数据卷，你需要显式的指定 --volumns 参数
+docker system prune --all --force --volumns #这次不仅会删除数据卷，而且连确认的过程都没有了！注意，使用 --all 参数后会删除所有未被引用的镜像而不仅仅是 dangling 镜像
+```
+
+
 
 
 

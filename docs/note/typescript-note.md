@@ -31,6 +31,30 @@ const typeMap = {
 type TypeValue = ValueOf<typeof typeMap>
 ```
 
+### 以对象的 value 值最为类型
+
+```tsx
+// ts 会默认推导类型 `white` 的类型为 `string`
+const color = {
+  white: '#fff',
+  black: '#000'
+}
+```
+
+改成
+
+```ts
+// 此时 white 的类型为 ‘#fff’
+const color = {
+  white: '#fff',
+  black: '#000'
+} as const
+```
+
+
+
+
+
 
 
 ## 常见问题
