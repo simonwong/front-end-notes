@@ -42,7 +42,7 @@
 
 
 - fork 后，如何与原仓库同步
-  1. `git remove -v` 查看远程仓库的路径，如果没有 `upstream` （上游代码库），继续
+  1. `git remote -v` 查看远程仓库的路径，如果没有 `upstream` （上游代码库），继续
   2. `git remote add upstream [git 地址]` 向本地添加上游代码库
   3. 查看本地有没有需改，该 stash stash ，该 push push
   4. `git fetch upstream` 更新上游仓库

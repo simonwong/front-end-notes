@@ -101,6 +101,42 @@ https://segmentfault.com/a/1190000014992947#articleHeader0
 
 
 
+## zsh 插件/主题
+
+### Powerlevel10k
+
+> Zsh 的主题，它强调速度，灵活，开箱即用
+
+[他的文档](https://github.com/romkatv/powerlevel10k#readme)
+
+
+
+搭配 oh my zsh 使用：
+
+1. 下载安装
+
+```shell
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+2. 配置 zsh 主题
+
+   在 `~/.zshrc`里设置 `ZSH_THEME="powerlevel10k/powerlevel10k"`
+
+3. 重启 iterm 会自动提示 p10k 的设置导航，根据提示一步一步设置
+
+4. 输入 `p10k configure` 可以再次重新配置。
+
+
+
+他的常见问题，
+
+当前工作目录路径过长，他本身也会帮助自适应简写前部分的路径，你也可以手动配置，
+
+在 `~/.p10k.zsh` 找到 `POWERLEVEL9K_SHORTEN_DIR_LENGTH`  `POWERLEVEL9K_DIR_MAX_LENGTH` 等配置去配置他
+
+
+
 ## 一些好用的配置
 
 ### 像输入文本一样输入命令行
