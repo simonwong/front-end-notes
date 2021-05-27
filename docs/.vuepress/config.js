@@ -109,6 +109,7 @@ module.exports = {
                         'git/mac多git账户配置',
                     ],
                 },
+                'linux备忘手册',
                 'nginx基础',
                 'nginx配置https',
                 'Docker基础',
