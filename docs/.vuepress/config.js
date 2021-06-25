@@ -34,6 +34,7 @@ module.exports = {
                     children: [
                         'React/React笔记',
                         'React/react-hooks使用技巧',
+                        'React/React组件开发5种高级模式',
                     ],
                 },
                 {
