@@ -224,6 +224,8 @@ pointer-events: auto; 默认
 
 ### 0.5px 最佳方案
 
+值得之一的是，伪元素的容器，最好不要 `overflow: hidden`， 如果一定要 hidden，且出现了边线丢失的问题，需要适当调整下面的定位位置或者高宽属性。
+
 ```css
 .border-base() {
   position: absolute;
