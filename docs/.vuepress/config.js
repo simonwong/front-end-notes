@@ -116,8 +116,15 @@ module.exports = {
           title: "设计模式",
           children: ["设计模式/", "设计模式/1.创建型模式"]
         },
+        {
+          title: "计算机网络",
+          children: [
+            "计算机网络/",
+            "计算机网络/tcpip",
+            "计算机网络/http",
+          ]
+        },
         "二进制与位运算的实用操作",
-        "http"
       ],
       // 工具
       "/tools/": ["", "iTerm", "Charles", "Homebrew"],

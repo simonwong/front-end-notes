@@ -24,7 +24,7 @@
 |      | 创建型（creational）                                         | 结构型（structural）     | 行为型（behavioral）                                |
 | ---- | ------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
 | 类   | **Factory Method**(3.3)                                      | **Adapter**( 类 )(4.1)   | **Interpreter**(5.3)<br />**Template Method**(5.10) |
-| 对象 | [**Abstract Factory**](./1.创建型模式.md#Abstract Factory（抽象工厂）—— 对象创建型模式)(3.1) | **Adapter**( 对象 )(4.1) | **Chain of Responsibility**(5.1)                    |
+| 对象 | [**Abstract Factory**](./1.创建型模式.md#abstract-factory-抽象工厂-对象创建型模式)(3.1) | **Adapter**( 对象 )(4.1) | **Chain of Responsibility**(5.1)                    |
 |      | **Builder**(3.2)                                             | **Bridge**(4.2)          | **Command**(5.2)                                    |
 |      | **Prototype**(3.4)                                           | **Composite**(4.3)       | **Iterator**(5.4)                                   |
 |      |                                                              | **Decorator**(4.4)       | **Mediator**(5.5)                                   |
