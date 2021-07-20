@@ -63,7 +63,7 @@ module.exports = {
                 },
                 '常用的css',
                 'webapp',
-                'js语言精粹',
+                '正则表达式',
                 '提升开发体验',
                 'webpack4-note',
                 'typescript-note',
@@ -131,7 +131,7 @@ module.exports = {
                         '数据结构与算法分析/排序算法',
                     ],
                 },
-                '进制',
+                '二进制与位运算的实用操作',
                 'http',
             ],
             // 工具
