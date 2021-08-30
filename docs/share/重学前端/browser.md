@@ -43,11 +43,11 @@
 
 这段代码会依次拆成词（token）
 
-- <p
-- class="a"
-- \>
-- text text txr
-- </p\>
+- `<p`
+- `class="a"`
+- `\>`
+- `text text txr`
+- `</p\>`
 
 
 

@@ -18,7 +18,7 @@
 
 将 from 代理到 to
 
-import 可以导入配置文件
+`import` 可以导入配置文件
 
 
 

@@ -38,3 +38,6 @@ functions/mock
 
 # screenshot
 screenshot
+
+.docusaurus
+/build

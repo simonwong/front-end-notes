@@ -196,7 +196,7 @@ div {
 
  ```css
  div {
-        postition: absolute;
+        position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
