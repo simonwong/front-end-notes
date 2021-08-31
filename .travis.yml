@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - "10"
+  - "14"
 
 install:
   - yarn --frozen-lockfile
 script:
-  - yarn docs:build
+  - yarn build
 catche: yarn
 
 deploy:
