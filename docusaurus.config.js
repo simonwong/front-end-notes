@@ -83,7 +83,7 @@ module.exports = {
           items: [
             {
               label: '日常笔记',
-              to: '/docs/',
+              to: '/docs/note',
             },
             {
               label: '前端进阶',
