@@ -1,7 +1,7 @@
 ---
 id: note
 title: 目录
-slug: /
+slug: /note
 ---
 
 # 目录
