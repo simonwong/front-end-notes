@@ -15,8 +15,8 @@ module.exports = {
   themeConfig: {
     hideableSidebar: true,
     // algolia: {
-    //   apiKey: '',
-    //   indexName: 'docusaurus-2',
+    //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+    //   indexName: 'docsearch',
     //   contextualSearch: true,
     // },
     navbar: {
@@ -64,15 +64,15 @@ module.exports = {
           label: '工具',
         },
         {
-          type: 'search',
-          position: 'right',
-        },
-        {
           href: 'https://github.com/simonwong',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
+        // {
+        //   type: 'search',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
