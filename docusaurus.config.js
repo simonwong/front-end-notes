@@ -14,11 +14,11 @@ module.exports = {
   projectName: 'front-end-notes',
   themeConfig: {
     hideableSidebar: true,
-    // algolia: {
-    //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-    //   indexName: 'docsearch',
-    //   contextualSearch: true,
-    // },
+    algolia: {
+      apiKey: '8397d833388be61b549778bf99f16cdf',
+      indexName: 'technical_notes',
+      contextualSearch: true,
+    },
     navbar: {
       hideOnScroll: true,
       title: '王思杰的技术笔记',
@@ -69,10 +69,6 @@ module.exports = {
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
-        // {
-        //   type: 'search',
-        //   position: 'right',
-        // },
       ],
     },
     footer: {
