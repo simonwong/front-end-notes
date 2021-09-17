@@ -14,11 +14,11 @@ module.exports = {
   projectName: 'front-end-notes',
   themeConfig: {
     hideableSidebar: true,
-    algolia: {
-      apiKey: '8397d833388be61b549778bf99f16cdf',
-      indexName: 'technical_notes',
-      contextualSearch: true,
-    },
+    // algolia: {
+    //   apiKey: '8397d833388be61b549778bf99f16cdf',
+    //   indexName: 'technical_notes',
+    //   contextualSearch: true,
+    // },
     navbar: {
       hideOnScroll: true,
       title: '王思杰的技术笔记',
