@@ -49,6 +49,14 @@
   5. 切到你要的分支 master 或者 feature 啥的，然后 `git merge upstream/master` （其实我有点担心会有 merge 节点，试了一次没有，如果有 merge 节点，可以试试 reabse）
   6. `git push`
 
+
+
+- 批量删除分支
+
+  `git branch |grep 'xxx' |xargs git branch -D`
+
+  其中 `git branch |grep 'xxx'` 可以查看所有匹配到 xxx 的分支。`|xargs` 是向后传前面的返回结果
+
 ## 常用操作
 
 ### 远程仓库a
@@ -171,16 +179,6 @@ pick 62573b8 feat: add
 pick 选择这个 commit 作为最新的代码
 
 squash 将这个 commit 压缩
-
-
-
-p
-
-s
-
-s
-
-
 
 
 

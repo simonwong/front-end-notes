@@ -107,7 +107,7 @@ function clone(configObject): BigNumber
 
 ### 重要函数
 
-- `parseNumeric` 处理为通过 `isNumeric` 测试的入参
+- `parseNumeric` 处理未通过 `isNumeric` 测试的参数
 
 ### 静态方法
 
