@@ -70,6 +70,7 @@ module.exports = {
       ],
     },
     'advanced/构建脚手架',
+    'advanced/umijs',
   ],
 
   /** 后端 */
