@@ -19,5 +19,5 @@ nginx 、 Docker 等等服务器部署相关的笔记
 - [mysql 基础入门](./mysql使用.md)
 - [nginx 基础](./nginx基础.md)
 - [nginx配置https](./nginx配置https.md)
-- [vim常用命令](./vim常用命令)
+- [vim常用命令](./vim常用命令.md)
 
