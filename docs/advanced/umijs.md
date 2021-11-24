@@ -70,7 +70,6 @@ index.ts 文件 export 了 `@umijs/runtime` 运行时的组件方法，如 `Link
 
 
 
-<img src="http://file.wangsijie.top/blog/202111241755577.png" style="zoom:100%;" />
-
+![](http://file.wangsijie.top/blog/202111241755577.png)
 
 
