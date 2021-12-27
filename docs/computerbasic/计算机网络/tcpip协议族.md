@@ -31,9 +31,9 @@ http协议中没有加密机制，但可以通过和 SSL （Secure Socket Layer�
 
 
 
-### https 是身披 SSL 外壳的 HTTP
+### https 是身披 SSL/TLS外壳的 HTTP
 
-通常 HTTP 直接和 TCP 通信，当使用 SSL 时，则变成先和 SSL 通信，再由 SSL 和 TCP 通信。
+通常 HTTP 直接和 TCP 通信，当使用 SSL/TLS 时，则变成先和 SSL/TLS 通信，再由 SSL/TLS 和 TCP 通信。
 
 ![](http://file.wangsijie.top/blog/202108121953592.jpg)
 

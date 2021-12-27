@@ -108,21 +108,21 @@ module.exports = {
     'computerbasic/computerbasic',
     {
       type: 'category',
-      label: '数据结构与算法分析',
+      label: '数据结构与算法',
       items: [
-        'computerbasic/数据结构与算法分析/README',
-        'computerbasic/数据结构与算法分析/复杂度分析',
-        'computerbasic/数据结构与算法分析/数据结构',
-        'computerbasic/数据结构与算法分析/排序算法',
+        'computerbasic/数据结构与算法/README',
+        'computerbasic/数据结构与算法/复杂度分析',
+        'computerbasic/数据结构与算法/数组与链表',
+        'computerbasic/数据结构与算法/散列表',
+        'computerbasic/数据结构与算法/二叉树',
+        'computerbasic/数据结构与算法/二叉堆',
+        'computerbasic/数据结构与算法/排序算法',
       ],
     },
     {
       type: 'category',
       label: '设计模式',
-      items: [
-        'computerbasic/设计模式/README',
-        'computerbasic/设计模式/创建型模式',
-      ],
+      items: ['computerbasic/设计模式/README'],
     },
     {
       type: 'category',
