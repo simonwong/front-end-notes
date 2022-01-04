@@ -46,6 +46,7 @@ module.exports = {
     'note/umi-note',
     'note/AppleScript-note',
     'note/macbook-note',
+    'note/日常笔记2021',
     'note/日常笔记2018-2020',
   ],
 
