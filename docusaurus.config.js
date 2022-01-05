@@ -64,6 +64,12 @@ module.exports = {
           label: '工具',
         },
         {
+          type: 'doc',
+          docId: 'share/share',
+          position: 'left',
+          label: '分享',
+        },
+        {
           href: 'https://github.com/simonwong',
           position: 'right',
           className: 'header-github-link',

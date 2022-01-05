@@ -2,7 +2,11 @@ module.exports = {
   /** 日常笔记 */
   note: [
     'note/note',
-    'note/日常笔记',
+    {
+      type: 'category',
+      label: '日常笔记',
+      items: ['note/daily/2022', 'note/daily/2021', 'note/daily/2018-2020'],
+    },
     {
       type: 'category',
       label: 'React',
@@ -46,8 +50,6 @@ module.exports = {
     'note/umi-note',
     'note/AppleScript-note',
     'note/macbook-note',
-    'note/日常笔记2021',
-    'note/日常笔记2018-2020',
   ],
 
   /** 前端进阶 */
@@ -145,14 +147,37 @@ module.exports = {
     'share/share',
     {
       type: 'category',
-      label: '重学前端',
+      label: '2022',
+      items: ['share/2022/包管理的坑'],
+    },
+    {
+      type: 'category',
+      label: '2021',
       items: [
-        'share/重学前端/README',
-        'share/重学前端/html',
-        'share/重学前端/css',
-        'share/重学前端/javascript',
-        'share/重学前端/browser',
-        'share/重学前端/engineering-practice',
+        'share/2021/设计开发业务组件的个人实践',
+        'share/2021/react-conf-2021',
+      ],
+    },
+    {
+      type: 'category',
+      label: '2020',
+      items: [
+        'share/2020/算法分享递归到树到动态规划',
+        'share/2020/TypeScript、Rollup搭建工具库',
+        'share/2020/从webpack打包看前端模块化',
+      ],
+    },
+    {
+      type: 'category',
+      label: '<=2019',
+      items: [
+        'share/older/ReactFiber架构浅析',
+        'share/older/React性能优化方案',
+        'share/older/TCP协议',
+        'share/older/函数式编程之柯里化',
+        'share/older/多版本包依赖问题探讨',
+        'share/older/常见的函数组合',
+        'share/older/纯函数',
       ],
     },
     {
@@ -168,15 +193,17 @@ module.exports = {
         'share/浏览器工作原理与实践/浏览器安全',
       ],
     },
-    'share/TypeScript、Rollup搭建工具库',
-    'share/从webpack打包看前端模块化',
-    'share/ReactFiber架构浅析',
-    'share/React性能优化方案',
-    'share/TCP协议',
-    'share/函数式编程之柯里化',
-    'share/多版本包依赖问题探讨',
-    'share/常见的函数组合',
-    'share/算法分享递归到树到动态规划',
-    'share/纯函数',
+    {
+      type: 'category',
+      label: '重学前端',
+      items: [
+        'share/重学前端/README',
+        'share/重学前端/html',
+        'share/重学前端/css',
+        'share/重学前端/javascript',
+        'share/重学前端/browser',
+        'share/重学前端/engineering-practice',
+      ],
+    },
   ],
 }

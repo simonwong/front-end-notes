@@ -131,7 +131,13 @@ relay、RN 桌面端、机器学习
 
 external stores 在 React 18 的 concurrent render 中可能会存在问题，同一个东西在不同组件
 
-使用新的 api useSyncExternalStore 来解决
+查看这个用例https://codesandbox.io/s/mousepositionx-ov7px
+
+使用新的 api `useSyncExternalStore` 来解决
+
+https://codesandbox.io/s/easy-exteral-state-in-react-18-hy3w8
+
+
 
 
 
