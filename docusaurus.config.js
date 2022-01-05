@@ -1,6 +1,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
+const currentYear = new Date().getFullYear()
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: '王思杰的技术笔记',
@@ -85,7 +87,7 @@ module.exports = {
           items: [
             {
               label: '日常笔记',
-              to: '/docs/note',
+              to: `/docs/note/daily/${currentYear}`,
             },
             {
               label: '前端进阶',
@@ -116,7 +118,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2019-${new Date().getFullYear()} Simon Wong.`,
+      copyright: `Copyright © 2019-${currentYear} Simon Wong.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -129,15 +131,9 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
