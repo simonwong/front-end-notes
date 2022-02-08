@@ -9,15 +9,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'React',
-      items: [
-        'note/React/React笔记',
-        'note/React/react-hooks使用技巧',
-        'note/React/React组件开发5种高级模式',
-      ],
-    },
-    {
-      type: 'category',
       label: 'NPM',
       items: [
         'note/NPM/npm基础',
@@ -57,12 +48,14 @@ module.exports = {
     'advanced/advanced',
     {
       type: 'category',
-      label: 'React 源码分析',
+      label: 'React 实践',
       items: [
-        'advanced/react源码分析/README',
-        'advanced/react源码分析/ReactDOM.render过程',
+        'advanced/react-practice/最佳实践',
+        'advanced/react-practice/react-hooks使用技巧',
+        'advanced/react-practice/React组件开发5种高级模式',
       ],
     },
+    'advanced/react-deep/README',
     {
       type: 'category',
       label: 'Webpack',
@@ -119,6 +112,7 @@ module.exports = {
         'computerbasic/数据结构与算法/散列表',
         'computerbasic/数据结构与算法/二叉树',
         'computerbasic/数据结构与算法/二叉堆',
+        'computerbasic/数据结构与算法/图/图',
         'computerbasic/数据结构与算法/排序算法',
       ],
     },
@@ -148,7 +142,7 @@ module.exports = {
     {
       type: 'category',
       label: '2022',
-      items: ['share/2022/包管理的坑'],
+      items: ['share/2022/包管理的坑', 'share/2022/commonjs与es模块的互操作'],
     },
     {
       type: 'category',

@@ -42,6 +42,7 @@ yarn run dev # 运行package.json中scripts定义的脚本命令,等同于 npm r
 yarn upgrade-interactive --latest # 交互式升级
 
 yarn global list --depth=0 # 查看全局安装的包
+yarn list --pattern "gulp|grunt"
 ```
 
 ### global
