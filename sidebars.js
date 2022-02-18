@@ -38,7 +38,6 @@ module.exports = {
     'note/正则表达式',
     'note/提升开发体验',
     'note/webpack4-note',
-    'note/typescript-note',
     'note/umi-note',
     'note/AppleScript-note',
     'note/macbook-note',

@@ -10,9 +10,9 @@ slug: /advanced
 
 ## React
 
-- [React 最佳实践](./react源码分析/最佳实践.md)
-- [React hooks 使用技巧](./react源码分析/react-hooks使用技巧.md)
-- [React 组件开发的 5 种高级模式](./react源码分析/React组件开发5种高级模式.md)
+- [React 最佳实践](./react-practice/最佳实践.md)
+- [React hooks 使用技巧](./react-practice/react-hooks使用技巧.md)
+- [React 组件开发的 5 种高级模式](./react-practice/React组件开发5种高级模式.md)
 
 - [深入学习 React 系列](./react-deep/README.md)
 
