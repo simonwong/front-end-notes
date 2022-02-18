@@ -9,8 +9,18 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'TypeScript',
+      items: [
+        'note/typescript/generics',
+        'note/typescript/practice',
+        'note/typescript/qa',
+      ],
+    },
+    {
+      type: 'category',
       label: 'NPM',
       items: [
+        'note/NPM/README',
         'note/NPM/npm基础',
         'note/NPM/npm机制',
         'note/NPM/npm包开发',
@@ -22,16 +32,7 @@ module.exports = {
       label: '小程序',
       items: ['note/applet/taro'],
     },
-    {
-      type: 'category',
-      label: 'Just JavaScript',
-      items: [
-        'note/justjavascript/README',
-        'note/justjavascript/mental-models',
-        'note/justjavascript/the-javascript-universe',
-        'note/justjavascript/values-and-variables',
-      ],
-    },
+    'note/justjavascript/README',
     'note/常用的css',
     'note/webapp',
     'note/正则表达式',
