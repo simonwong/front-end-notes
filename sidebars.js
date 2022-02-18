@@ -71,7 +71,6 @@ module.exports = {
         'advanced/react-deep/state-change',
       ],
     },
-    'advanced/react-deep/README',
     {
       type: 'category',
       label: 'Webpack',
