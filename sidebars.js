@@ -56,6 +56,22 @@ module.exports = {
         'advanced/react-practice/React组件开发5种高级模式',
       ],
     },
+    {
+      type: 'category',
+      label: 'React 深入学习',
+      items: [
+        'advanced/react-deep/README',
+        'advanced/react-deep/fiber',
+        'advanced/react-deep/react-glossary',
+        'advanced/react-deep/react-18-feature',
+        'advanced/react-deep/stage-render',
+        'advanced/react-deep/stage-commit',
+        'advanced/react-deep/react-fake',
+        'advanced/react-deep/lane-model',
+        'advanced/react-deep/diff',
+        'advanced/react-deep/state-change',
+      ],
+    },
     'advanced/react-deep/README',
     {
       type: 'category',
