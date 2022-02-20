@@ -6,7 +6,7 @@
 
 一棵在render阶段构建的备用树，叫做 *workInProgress* 或者 *finishedWork*
 
-还有一个 effectList ，也是在渲染阶段生成的，通过指针指向树的节点。
+还有一个 effectList （在 17.x 版本中已经没有 effectList，而是 dfs 带有 flags 标识的 fiber tree），也是在渲染阶段生成的，通过指针指向树的节点。
 
 
 
@@ -16,11 +16,47 @@ commit 阶段的入口是 `commitRoot` 方法（`commitRootImpl`），commit 阶
 
 
 
+**在进入子阶段之前，**
+
+```js
+do {
+  // 我们需要在循环中不断刷新,触发 useEffects 回调，直到不再有 pendingEffects, 因为在回调中可能又会更新状态
+  flushPassiveEffects();
+} while (rootWithPendingPassiveEffects !== null);
+```
+
+然后重置各种状态。
+
+下面这个操作从子阶段提取出来了，见 [issues#16714](https://github.com/facebook/react/pull/16714)
+
+```js
+// 如果存在待定的被动效果，请安排回调来处理它们。
+// 尽可能早地执行此操作，以便在 commit 阶段安排任何其他操作之前将其排队
+if (
+  (finishedWork.subtreeFlags & PassiveMask) !== NoFlags ||
+  (finishedWork.flags & PassiveMask) !== NoFlags
+) {
+  if (!rootDoesHavePassiveEffects) {
+    rootDoesHavePassiveEffects = true;
+    scheduleCallback(NormalSchedulerPriority, () => {
+      flushPassiveEffects();
+      return null;
+    });
+  }
+}
+```
+
+
+
 主要关注三个阶段的入口函数：`commitBeforeMutationEffects`、`commitMutationEffects`、`commitLayoutEffects`
 
 ## before mutation
 
-第一个阶段是 **before mutation 阶段**，在umtate host tree 之前，我们读取 host tree 的状态，**这里是调用 `getSnapshotBeforeUpdate` 的地方。**
+第一个阶段是 **before mutation 阶段**，在umtate host tree 之前，我们读取 host tree 的状态，
+
+**类组件：调用 `getSnapshotBeforeUpdate`** 
+
+~~函数组件：异步调度useEffect~~ 被提取出来在子阶段之前执行了
 
 ### 过程伪代码
 
@@ -50,6 +86,10 @@ function commitBeforeMutationEffects_complete () {
 ## mutation
 
 第二个阶段是 **mutation 阶段**，我们在这里改变宿主树（mutate the host tree）。
+
+类组件：调用 componentWillUnmount
+
+函数组件：执行 useLayoutEffect 的销毁函数 `commitHookEffectListUnmount(HookLayout | HookHasEffect,finishedWork,finishedWork.return)`
 
 ### 过程伪代码
 
@@ -112,9 +152,9 @@ workInProgress tree 现在是 current tree 了（`root.current = finishedWork`�
 
 第三个阶段是 layout 阶段，我们称之为 mutated 后读取 host tree 的 effects。
 
-这方面的惯用用例是布局，但由于遗留原因，类组件生命周期也在这里触发。
+类组件：调用 `componentDidMount` `componentDidUpdate` 调用setState的回调
 
-
+函数组件：执行 useLayoutEffect 的回调函数 `commitHookEffectListMount(HookLayout | HookHasEffect, finishedWork)`
 
 ### 过程伪代码
 
@@ -158,14 +198,14 @@ function commitLayoutEffectOnFiber () {
 
 ### flushPassiveEffects
 
-返回是否刷新了被动效果（passive effect）
+执行 useEffect 的销毁函数，紧接着执行 useEffect 的回调函数
 
-`Scheduler.runWithPriority`，它接受一个函数。但是现在我们跟踪 React 本身的优先级，所以我们可以直接变异变量。
-
-
-
-猜想：在 commit 阶段开始的时候，flushPassiveEffects （顺序？）执行所有 useEffect ，直到没有了，继续，后面还是有地方执行 flushPassiveEffects ，直到副作用执行完毕。
-
-
-
-> 与 `componentDidMount`、`componentDidUpdate` 不同的是，传给 `useEffect` 的函数会在浏览器完成布局与绘制**之后**，在一个延迟事件中被调用。这使得它适用于许多常见的副作用场景，比如设置订阅和事件处理等情况，因为绝大多数操作不应阻塞浏览器对屏幕的更新
+```js
+useEffect(() => {
+  // 回调函数
+  
+  return () => {
+    // 销毁函数
+  }
+})
+```

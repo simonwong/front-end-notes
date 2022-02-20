@@ -22,7 +22,7 @@ function FiberNode(
   // 实例
   this.tag = tag;
   this.key = key; // 一组子节点的唯一标识符
-  this.elementType = null;
+  this.elementType = null; // element.type
   this.type = null; // 指向组件的函数、构造函数、DOM 节点的 HTML tag
   this.stateNode = null; // 对组件、DOM节点或与光纤节点关联的其他元素类型的类实例的引用
 
@@ -35,12 +35,12 @@ function FiberNode(
   this.ref = null;
 
   this.pendingProps = pendingProps; // 根据React元素中的新数据更新的 props，需要应用于子组件或DOM元素。
-  this.memoizedProps = null; // 在上一次渲染期间用于创建输出的光纤道具。
+  this.memoizedProps = null; // 在上一次渲染期间用于创建输出的 fiber props
   this.updateQueue = null; // 状态更新、回调和DOM更新的队列。
   this.memoizedState = null; // 用于创建输出的光纤的状态。处理更新时，它会反映屏幕上当前呈现的状态。
-  this.dependencies = null; // 
+  this.dependencies = null; // 依赖项（上下文、事件）（如果有）
 
-  this.mode = mode;
+  this.mode = mode; // 描述 fiber 及其子树属性的位字段。
 
   // 副作用
   this.flags = NoFlags; // 副作用标识，以前叫做 effectTag
@@ -84,6 +84,10 @@ React 总是一次性更新 DOM，不会显示部分结果，workInProgress tree
 注：现在使用*flags* 属性标识的（以前这个属性名叫 *effectTag*）
 
 ## Effects list
+
+**需要注意的是 effects list 已经被重构了，详见 [Effects list refactor](https://github.com/facebook/react/pull/19261)**
+
+
 
 如果在 wip 树上递归找要更新的节点会比较慢，react 提供了一个线性的数据结构 effect list，每一个元素都是需要更新的节点。
 

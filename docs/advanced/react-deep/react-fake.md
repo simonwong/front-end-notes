@@ -199,7 +199,9 @@ function beginWork (current, workInProgress) {
     case FunctionComponent: {
       // return updateFunctionComponent() ...
     }
-      
+    case HostRoot: {
+      return updateHostRoot
+    }
     case HostComponent: {
       return updateHostComponent(current, workInProgress, renderLanes)
     }
@@ -210,6 +212,17 @@ function beginWork (current, workInProgress) {
 ```
 
 ```js
+function updateHostRoot (current, workInProgress, renderLanes) {
+  // cloneUpdateQueue ...
+  // processUpdateQueue 处理更新队列 ...
+  
+  if (nextChildren === prevChildren) {
+    // return bailoutOnAlreadyFinishedWork() ...
+  }
+  // mountChildFibers() | reconcileChildren() ...
+  return workInProgress.child
+}
+
 function updateHostComponent (current, workInProgress, renderLanes) {
 	// nextChildren = workInProgress.pendingProps.children
   reconcileChildren(current, workInProgress, nextChildren, renderLanes);

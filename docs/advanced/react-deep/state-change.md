@@ -1,6 +1,6 @@
 # 状态更新
 
-## 预备
+## 更新优先级
 
 ### UpdateQueue
 
@@ -61,7 +61,7 @@ WIP queue 处理的更新比 current 多
 
    状态结果: `'AC'`
 
-2. 第一次渲染，优先级为1：
+2. 第二次渲染，优先级为1：
 
    初始状态: `'A'`（初始状态不包含 C1，因为 B2 被跳过了）
 
@@ -83,71 +83,91 @@ WIP queue 处理的更新比 current 多
 
 ## 数据结构
 
-我们在状态更新时首先会创建一个 `Update` 对象。
+我们在状态更新时首先会创建一个 `Update` 对象，表示状态的更新。
 
-由于不同类型组件工作方式不同，所以存在两种不同结构的`Update`，其中`ClassComponent`与`HostRoot`共用一套`Update`结构，`FunctionComponent`单独使用一种`Update`结构，我们叫 `Hook`。
+由于不同类型组件工作方式不同，所以存在两种不同结构的`Update`，其中`ClassComponent`与`HostRoot`共用一套`Update`结构，`FunctionComponent`单独使用一种`Update`结构。
 
-### UpdateQueue
+## ClassComponent / HostRoot
+
+类组件，或者根组件
+
+根组件会在 `updateContainer` 中调用 `createUpdate` `enqueueUpdate`
+
+类组件 `this.setState(xxx)` 会调用   `enqueueSetState` ，然后调用 `createUpdate` `enqueueUpdate`
+
+### createUpdate
+
+createUpdate 会创建并返回如下结构的 Update 对象，是一个链表结构
 
 ```typescript
 type Update<State> = {
   eventTime: number, // 任务时间，通过 performance.now() 获取的毫秒数
-  lane: Lane, // 优先级
+  lane: Lane, // 优先级，当前更新能否被处理取决于他的优先级是否在本次渲染的批次中
   tag: 0 | 1 | 2 | 3, // 更新类型，分别对应 UpdateState ReplaceState ForceUpdate CaptureUpdate
-  payload: any, // 是更新挂载的数据
-  callback: (() => mixed) | null, // 回到函数，会在 commit#layout 阶段触发
+  payload: any, // 携带的状态，class 中是对象或者函数 (prevState, nextProps) => newState；root 中是 rootEl
+  callback: (() => mixed) | null, // 回调函数，会在 commit#layout 阶段触发
   next: Update<State> | null, // 下一个 Update
 }
 ```
 
+### enqueueUpdate
+
+在 fiber 节点上有一个 updateQueue 属性，它是下面这样的一个 UpdateQueue 对象。
+
 ```typescript
+type SharedQueue<State> = {
+  pending: Update<State> | null,
+  interleaved: Update<State> | null,
+  lanes: Lanes,
+}
+
+// current 表示已经更新上去的状态 / 上一次更新上去的状态，如上面例子中的第一渲染后的结果。
 type UpdateQueue<State> = {
-  baseState: State, // current Fiber 的 state (old state)
-  firstBaseUpdate: Update<State> | null, // current 上 Update 头节点（可能优先级低被跳过了，如上的 B2-C1-D2）
-  lastBaseUpdate: Update<State> | null, // current 上 Update 尾节点
-  shared: SharedQueue<State>,
-  effects: Array<Update<State>> | null,
+  baseState: State, // current Fiber 的 state (old state) 以他为基础，如例子中的第二次渲染的初始状态
+  firstBaseUpdate: Update<State> | null, // current 上 Update 头节点，如例子中的第二次渲染的 B2-C1-D2
+  lastBaseUpdate: Update<State> | null, // current 上 Update 尾节点，B2 是 first , D2 是 last
+  shared: SharedQueue<State>, // 存储着本次更新的 update 队列，是实际的 updateQueue。shared 的意思是 current 节点与 workInProgress 节点共享一条更新队列。
+  effects: Array<Update<State>> | null, // 保存 update.callback !== null 的 Update
 }
 ```
 
-### Hook
+enqueueUpdate 会使得 UpdateQueue （实际上是它上面的 shared.pending）形成一个单向环形链表结构。
 
-```typescript
-type Update<S, A> = {
-  lane: Lane, // 优先级
-  action: A,
-  eagerReducer: ((S, A) => S) | null,
-  eagerState: S | null,
-  next: Update<S, A>,
-}
-
-type UpdateQueue<S, A> = {
-  pending: Update<S, A> | null,
-  interleaved: Update<S, A> | null,
-  lanes: Lanes, // 任务批次
-  dispatch: (A => mixed) | null,
-  lastRenderedReducer: ((S, A) => S) | null,
-  lastRenderedState: S | null,
+```js
+function enqueueUpdate (fiber， update， lane) {
+  const updateQueue = fiber.updateQueue
+  const sharedQueue = updateQueue.shared
+  const pending = sharedQueue.pending // pending 总是指向最后一个 Update，pending.next 就是 head
+  if (pending === null) {
+    update.next = update;
+  } else {
+    update.next = pending.next;
+    pending.next = update;
+  }
+  sharedQueue.pending = update;
 }
 ```
 
-```typescript
-type Hook = {
-  memoizedState: any, // 表示 hook 存的数据
-  baseState: any,
-  baseQueue: Update<any, any> | null,
-  queue: UpdateQueue<any, any> | null,
-  next: Hook | null,
-}
+### processUpdateQueue
 
-type Effect = {
-  tag: HookFlags,
-  create: () => (() => void) | void,
-  destroy: (() => void) | void,
-  deps: Array<mixed> | null,
-  next: Effect,
-}
+在 beginWork 阶段，会进行更新队列的处理。
 
-type FunctionComponentUpdateQueue = { lastEffect: Effect | null }
-```
+1. 整理 UpdateQueue ，当进行了一次更新后，有些 Update 可能被跳过了，第二次更新又进来了新的 Update，此时可能存在两条更新队列：1: 上一次被跳过的更新：firstBaseUpdate - lastBaseUpdate， 2: 新来的 Update
+
+2. 断开 pending 环形链表，合并上面两条更新队列，因为当前操作的是 WIP fiber，所以还需要同步到  currrent fiber 上。（两边都同步是因为，如果当前被高优先级任务打断，WIP 就没有了，但是 current 上还保留着，避免丢失 Update。）
+
+
+
+3. while 循环
+   - 如果优先级不够，那么跳过更新，放到 firstBaseUpdate 上。
+   - 如果优先级足够，处理本次更新 `getStateFromUpdate()`，别忘了，本次更新是基于上一次更新的 (baseState / 循环更新的 newState)
+     - callback 是 setState 的第二个参数，如果有 callback，就会放到 effects 队列中
+     - update = update.next 回到 第三步
+4. 根据上面的计算，更新 UpdateQueue 的 firstBaseUpdate、 lastBaseUpdate，workInProgress 的 lanes、memoizedState
+
+## FunctionComponent
+
+见 [React Hooks](./react-hooks.md)
+
+
 

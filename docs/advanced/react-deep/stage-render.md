@@ -1,8 +1,6 @@
 # render 流程
 
-![](http://file.wangsijie.top/blog/202201261126536.png)
-
-
+![](http://file.wangsijie.top/blog/202202201216897.png)
 
 
 
@@ -69,20 +67,6 @@
 给 WIP 添加需要更新的标识 `workInProgress.flags |= Update`
 
 
-
-
-
-## 需要关注的东西
-
-### 不同优先级的流程
-
-### effectList
-
-注：在 v17 正式版开始，就没有 effectList 的概念了，最早什么时候改的不清楚
-
-![](http://file.wangsijie.top/blog/202201261547305.png)
-
-![](http://file.wangsijie.top/blog/202201261548456.png)
 
 
 
