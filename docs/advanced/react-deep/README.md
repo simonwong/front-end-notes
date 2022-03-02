@@ -24,6 +24,8 @@
 
 [React 状态更新](./state-change.md)
 
+[事件处理：合成事件](./synthetic-event.md)
+
 ## 参考
 
 - [React In Depth](https://indepth.dev/react)

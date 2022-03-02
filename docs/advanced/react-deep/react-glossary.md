@@ -38,6 +38,14 @@ React 会向上查找最近的 Suspense，该 Suspense 包含了用户设置好�
 
 
 
+## Batching and Automatic batching
+
+批处理就是，连续 3 次调用 setState ，React 会处理成一次渲染。
+
+但是在 18 之前，异步回调、事件回调等中连续调用，React 会重新渲染 3 次（每次调用都立即渲染）。
+
+React 18 现在会自动批量处理，上面这种情况也只会渲染一次。
+
 ## Hydration
 
 SSR 允许你将服务器上的组件渲染为HTML 并发送给用户，可以使得用户在加载 JS 时就看到简单的东西（仅仅简单的展示，由于 JS 尚未加载，按钮点击都不会有效。）
