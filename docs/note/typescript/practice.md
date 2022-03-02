@@ -99,3 +99,24 @@ type Join<T extends unknown[], U extends string> = T extends [infer Head, ...inf
     : ''
 ```
 
+### 数组转对象
+
+`[[k1, v1], [k2, v2]]` 转成 `{ k1: v1, k2: v2 }`
+
+```ts
+type MapArray = readonly (readonly [string, string])[]
+type MapRecord = Record<string, string>
+type ArrayToObject<Arr extends MapArray, Result extends MapRecord = {}> =
+	Arr extends []
+		? Result
+		: Arr extends readonly [infer Head, ...infer Tail]
+      ? Head extends readonly [infer Key, infer Value]
+        ? Tail extends MapArray
+          ? Key extends string
+            ? ArrayToObject<Tail, Result & Record<Key, Value>>
+            : never
+          : never
+        : never
+      : never
+```
+
