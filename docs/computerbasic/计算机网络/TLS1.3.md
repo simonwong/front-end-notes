@@ -1,4 +1,4 @@
-# TLS 连接过程
+# TLS 1.3 连接过程
 
 原文[The New Illustrated TLS Connection](https://tls13.ulfheim.net/)
 
@@ -27,11 +27,11 @@ TLS 1.3 加密协议
 💙🔙服务端 Wrapper
 
  	⇢服务端加密扩展
-
+ 	
  	⇢服务端证书
-
+ 	
  	⇢服务端证书验证
-
+ 	
  	⇢服务端握手完成
 
 💙➗服务端应用 key 计算
@@ -51,7 +51,7 @@ TLS 1.3 加密协议
 💙🔙服务端 Wrapper
 
  	⇢服务端回话票据1
-
+ 	
  	⇢服务端回话票据2
 
 💙🔙服务端 Wrapper
