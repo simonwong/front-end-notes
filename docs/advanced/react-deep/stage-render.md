@@ -80,3 +80,25 @@
 
 
 
+## 需要关注的重要方法
+
+### ensureRootIsScheduled
+
+![](http://file.wangsijie.top/blog/202203071117141.png)
+
+该方法是在 scheduleUpdateOnFiber 中被调用的。
+
+- `scheduleSyncCallback()` 将任务放到 *syncQueue* 中
+
+- `scheduleMicrotask()` 将任务放到微任务中调度
+- `scheduleCallback()` 将任务放到一个优先级队列（最小堆）中，立即执行
+
+
+
+得益于微任务，可以进行批处理。
+
+为什么 17 也是用了微任务，但没有批处理，因为在 scheduleUpdateOnFiber 中，判断了如果用的是旧版本的使用方式（为了兼容，避免问题），会调用 `scheduleCallback` 立即执行。
+
+
+
+在以前的版本中，React 接管了事件，会在事件开始时 isBatchingEventUpdates = true， 事件结束后 isBatchingEventUpdates = false，来开启批量处理。而 setTimeout 等的回调会脱离这个控制。

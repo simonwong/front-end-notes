@@ -57,7 +57,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'React 深入学习',
+      label: '深入 React 系列',
       items: [
         'advanced/react-deep/README',
         'advanced/react-deep/fiber',
@@ -69,6 +69,16 @@ module.exports = {
         'advanced/react-deep/lane-model',
         'advanced/react-deep/diff',
         'advanced/react-deep/state-change',
+      ],
+    },
+    {
+      type: 'category',
+      label: '深入 React 生态系列',
+      items: [
+        'advanced/react-ecology/README',
+        'advanced/react-ecology/react-router',
+        'advanced/react-ecology/react-redux',
+        'advanced/react-ecology/zustand',
       ],
     },
     {

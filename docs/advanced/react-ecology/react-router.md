@@ -24,14 +24,14 @@ const App = () => (
       <Route element={<Home />} path="/home" />
       <Route
         element={
-        	<React.Suspense fallback={<span>Loading...</span>}>
-          	<About />
-        	</React.Suspense>
+          <React.Suspense fallback={<span>Loading...</span>}>
+            <About />
+          </React.Suspense>
         }
         path="/about"
       />
       <Route element={<Multi />} path="/multi">
-				<Route element={<PartOne />} path="/multi/p1" />
+        <Route element={<PartOne />} path="/multi/p1" />
         <Route element={<PartTwo />} path="/multi/p2" />
       </Route>
     </Routes>
@@ -39,8 +39,8 @@ const App = () => (
 )
 
 const Multi = () => (
-	<div>
-  	<h3>Multi </h3>
+  <div>
+    <h3>Multi </h3>
     <Outlet />
   </div>
 )

@@ -1,6 +1,36 @@
 # React Hooks 使用技巧
 
-## 依赖
+## 常用 hooks
+
+### 兼容 ssr 的 useEffect
+
+```ts
+const useEnhancedEffect =
+  typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect
+```
+
+### 存储事件回调
+
+```ts
+const useEventCallback = <A extends unknown[], R>(
+  fn: (...args: A) => R,
+): ((...args: A) => R) => {
+  const fnRef = useRef(fn)
+
+  useEnhancedEffect(() => {
+    fnRef.current = fn
+  })
+
+  return useCallback(
+    (...args: A) =>
+      // @ts-expect-error
+      (0, fnRef.current)(...args),
+    [],
+  )
+}
+```
+
+
 
 ### useEffect 依赖公用函数
 
