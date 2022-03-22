@@ -83,15 +83,20 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Rollup',
+      items: ['advanced/rollup/README', 'advanced/rollup/plugins'],
+    },
+    {
+      type: 'category',
       label: 'Webpack',
       items: [
         'advanced/webpack/README',
         'advanced/webpack/config',
         'advanced/webpack/optimization',
+        'advanced/umijs',
       ],
     },
     'advanced/构建脚手架',
-    'advanced/umijs',
   ],
 
   /** 后端 */
