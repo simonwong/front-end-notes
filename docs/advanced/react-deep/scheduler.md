@@ -2,9 +2,12 @@
 
 React 的调度器我们重点关注一下几个方法
 
-- unstable_scheduleCallback
+- unstable_scheduleCallback 请求即时回调
+- shouldYieldToHost 是否让出主线程
 
 ## unstable_scheduleCallback
+
+**请求即时回调**
 
 在别的地方一般都叫做 Scheduler_scheduleCallback，或者 scheduleCallback
 

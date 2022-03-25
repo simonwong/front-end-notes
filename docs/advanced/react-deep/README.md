@@ -32,16 +32,6 @@
 
 - [React In Depth](https://indepth.dev/react)
 - [Inside Fiber: in-depth overview of the new reconciliation algorithm in React](https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef6e)
-- [React技术揭秘](https://react.iamkasong.com/)
+- [React 技术揭秘](https://react.iamkasong.com/)
 - [React 18 discussions](https://github.com/reactwg/react-18/discussions)
-
-
-
-
-
-
-
-https://segmentfault.com/a/1190000039031957
-
-https://github.com/reactwg/react-18/discussions/41
-
+- [图解 React](https://7kms.github.io/react-illustration-series/)
