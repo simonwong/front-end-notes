@@ -198,7 +198,7 @@ function commitLayoutEffectOnFiber () {
 
 ### flushPassiveEffects
 
-执行 useEffect 的销毁函数，紧接着执行 useEffect 的回调函数
+执行 useEffect 的销毁函数，紧接着执行 useEffect 的回调函数。回调是在一个优先级队列（最小堆）中，在浏览器空闲时调用的（使用 MessageChannel 模拟的）。
 
 ```js
 useEffect(() => {

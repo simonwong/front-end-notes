@@ -24,6 +24,8 @@
 
 [React 状态更新](./state-change.md)
 
+[React 调度器](./scheduler.md)
+
 [事件处理：合成事件](./synthetic-event.md)
 
 ## 参考

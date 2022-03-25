@@ -69,6 +69,8 @@ module.exports = {
         'advanced/react-deep/lane-model',
         'advanced/react-deep/diff',
         'advanced/react-deep/state-change',
+        'advanced/react-deep/scheduler',
+        'advanced/react-deep/synthetic-event',
       ],
     },
     {
