@@ -2,6 +2,10 @@
 
 ## QA
 
+### non-nullable 类型
+
+通过开启 `strictNullChecks` 配置，将会严格 null 检查。
+
 ### ESNext 编译成 CommonJS
 
 ```json
