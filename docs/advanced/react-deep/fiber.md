@@ -26,7 +26,7 @@ function FiberNode(
   this.type = null; // 指向组件的函数、构造函数、DOM 节点的 HTML tag
   this.stateNode = null; // 对组件、DOM节点或与光纤节点关联的其他元素类型的类实例的引用
 
-  // Fiber 执政
+  // Fiber 引用
   this.return = null; // 父节点
   this.child = null; // 第一个子节点
   this.sibling = null; // 下一个兄弟节点
