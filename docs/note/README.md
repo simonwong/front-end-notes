@@ -9,7 +9,12 @@ slug: /note
 - [日常笔记](./daily/2022.md)
 - [日常笔记2021](./daily/2021.md)
 - [日常笔记2018-2020](./daily/2018-2020.md)
-- [Just JavaScript](./justjavascript/README.md)
+
+
+
+## 编程范式
+
+- [函数式编程](./functional-programming/README.md)
 
 ## 心得总结
 
