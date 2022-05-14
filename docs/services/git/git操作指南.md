@@ -57,6 +57,14 @@
 
   其中 `git branch |grep 'xxx'` 可以查看所有匹配到 xxx 的分支。`|xargs` 是向后传前面的返回结果
 
+
+
+- ssh 配置流程
+  1. 命令行输入 `ssh-keygen -t ed25519 -C "your_email@example.com"`
+  2. 确定目录文件名、确定密码（可以不用密码，不然每次都要输入）
+  3. 在 gitlab、gitHub 上输入你生成的公钥（xxxx.pub）
+  4. 需要的话，在 `~/.ssh/cconfig` 中配置服务器 host 以及 密钥路径 （~/.shh/xxx）
+
 ## 常用操作
 
 ### 远程仓库a
