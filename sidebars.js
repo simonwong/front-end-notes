@@ -118,6 +118,7 @@ module.exports = {
       items: [
         'services/git/git操作指南',
         'services/git/gitlab-workflow',
+        'services/git/git-flow',
         'services/git/mac多git账户配置',
       ],
     },

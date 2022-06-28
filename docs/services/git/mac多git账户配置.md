@@ -6,7 +6,7 @@ git 2.13.0 以后有一个叫 [conditional includes](https://git-scm.com/docs/gi
 
 第一步：删掉 ~/.gitconfig 里的 user 章节，也就是不使用全局配置了
 
-第二步：增加 includeIf 配置，意思是这两个目录下分别读不同的配置文件
+第二步：增加 includeIf 配置，意思是这两个目录下分别读不同的配置文件（**注意，路径后面一定要带`/`**）
 
 ```bash
 [includeIf "gitdir:~/Code/Personal/"]

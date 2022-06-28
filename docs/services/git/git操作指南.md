@@ -65,6 +65,12 @@
   3. 在 gitlab、gitHub 上输入你生成的公钥（xxxx.pub）
   4. 需要的话，在 `~/.ssh/cconfig` 中配置服务器 host 以及 密钥路径 （~/.shh/xxx）
 
+- 同步 remote 被删除了的分支
+
+  `git remote prune origin` 或者 `git fetch --prune`
+
+  区别参考 [What are the differences between git remote prune, git prune, git fetch --prune, etc](https://stackoverflow.com/questions/20106712/what-are-the-differences-between-git-remote-prune-git-prune-git-fetch-prune)
+
 ## 常用操作
 
 ### 远程仓库a

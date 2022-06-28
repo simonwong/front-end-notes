@@ -27,7 +27,7 @@ gfli
 1. **建立 feature 分支**
 
 ```bash
-git flow feature start
+git flow feature start [branch-name]
 
 gflfs
 ```
@@ -41,7 +41,7 @@ gflff
 ```
 
 ```bash
-git flow release start
+git flow release start [branch-name]
 
 gflrs
 ```
