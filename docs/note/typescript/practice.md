@@ -138,6 +138,30 @@ type RemoveIndexSignature<T> = {
 
 
 
+### Enum 转 Union
+
+```ts
+enum OrderStatus {
+	start,
+  pending,
+  end,
+}
+```
+
+#### Enum key 转 Union
+
+```ts
+type StatusKey = keyof typeof OrderStatus
+```
+
+#### Enum value 转 Union
+
+```ts
+type StatusValue = `${OrderStatus}`
+```
+
+
+
 ## 骚操作
 
 重点在于使用 infer 提取，使用三元表达式递归。

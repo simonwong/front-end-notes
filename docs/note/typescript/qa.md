@@ -29,6 +29,22 @@
 }
 ```
 
+### tsconfig 报错无法写入文件
+
+当遇到 tsconfig 报错“无法写入文件x x x x，因为他会覆盖输入文件”。尝试添加 outDir 配置
+
+```json
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+}
+```
+
 
 
 ## 配置文件解释
