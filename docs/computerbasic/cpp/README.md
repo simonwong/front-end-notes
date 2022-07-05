@@ -97,9 +97,6 @@ C++ 源文件的后缀十分混乱，不同编译器支持不同后缀：
 ## 参考资料
 
 - 《C++ Primer》（中文版）（第 5 版）
--  [C++ 参考手册](https://zh.cppreference.com/w/cpp)（中文版）
-
+- [C++ 参考手册](https://zh.cppreference.com/w/cpp)（中文版）
 - [现代 C++ 教程: 高速上手 C++ 11/14/17/20](https://changkun.de/modern-cpp/)
-- 
-
 - [Google 风格指南中文版：C++ 风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/)

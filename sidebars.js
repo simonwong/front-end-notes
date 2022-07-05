@@ -163,6 +163,11 @@ module.exports = {
         'computerbasic/计算机网络/http',
       ],
     },
+    {
+      type: 'category',
+      label: 'C++',
+      items: ['computerbasic/cpp_primer/README', 'computerbasic/cpp/README'],
+    },
     'computerbasic/二进制与位运算的实用操作',
   ],
 
