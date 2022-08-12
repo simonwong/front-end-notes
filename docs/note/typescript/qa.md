@@ -45,6 +45,22 @@
 }
 ```
 
+### steTimeout 的类型只有 NodeJS.Timeout
+
+使用 ReturnType 提取，来获得独立平台的类型
+
+```ts
+let timer: ReturnType<typeof setTimeout> | null = null
+```
+
+### 为全局对象添加属性
+
+```typescript
+interface Window {
+  test: string;
+}
+```
+
 
 
 ## 配置文件解释
