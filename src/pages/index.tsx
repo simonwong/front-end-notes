@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
@@ -7,7 +7,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 
-function HomepageHeader() {
+const HomepageHeader = () => {
   const { siteConfig } = useDocusaurusContext()
   return (
     <header className={clsx('hero', styles.heroBanner)}>
@@ -24,7 +24,7 @@ function HomepageHeader() {
   )
 }
 
-export default function Home() {
+const Home = () => {
   const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
@@ -38,3 +38,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default Home
