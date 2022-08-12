@@ -38,5 +38,5 @@ slug: /advanced
 
 ## 常用库学习
 
-- [bignumber.js源码解析](./bignumber.js源码解析.js)
+- [bignumber.js源码解析](./bignumberjs源码解析.md)
 
