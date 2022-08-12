@@ -100,7 +100,18 @@ gflr
 
 
 
+## 注意事项
 
+### feature finish 自动快进
+
+参考 https://github.com/nvie/gitflow/issues/100#issuecomment-769968
+
+git-flow 在设计上，如果开发分支仅有一个 commit，就会开启快进。
+
+```bash
+if [ "$(git rev-list -n2 "$DEVELOP_BRANCH..$BRANCH" | wc -l)" -eq 1 ]; then
+    git_do merge --ff "$BRANCH"
+```
 
 
 
