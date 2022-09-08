@@ -105,6 +105,8 @@ git checkout master git merge recovery 切回主分支
 
 `git push origin --delete branch` 删除线上分支
 
+`git push origin --follow-tags` tag 跟随分支一起 push
+
 
 
 ### 合并
