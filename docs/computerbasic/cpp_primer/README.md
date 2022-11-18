@@ -15,4 +15,12 @@
 - 第 4 章：表达式 [笔记](./part01/ch04.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part01/ch04)
 
 - 第 5 章：语句 [笔记](./part01/ch05.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part01/ch05)
+- 第 6 章：函数 [笔记](./part01/ch06.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part01/ch06)
+- 第 7 章：类  [笔记](./part01/ch07.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part01/ch07)
+
+### 第二部分
+
+[概览](./part02/README.md)
+
+- 第 8 章：IO 库
 
