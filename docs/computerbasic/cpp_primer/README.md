@@ -22,5 +22,14 @@
 
 [概览](./part02/README.md)
 
-- 第 8 章：IO 库
+- 第 8 章：IO 库 [笔记](./part02/ch08.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part02/ch08)
+- 第 9 章：顺序容器 [笔记](./part02/ch09.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part02/ch09)
+- 第 10 章：范型算法 [笔记](./part02/ch10.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part02/ch10)
+- 第 11 章：关联容器 [笔记](./part02/ch11.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part02/ch11)
+- 第 12 章：动态内存  [笔记](./part02/ch12.md) [练习](https://github.com/simonwong/cpp-primer-practice/blob/master/part02/ch12)
 
+### 第三部分
+
+[概览](./part03/README.md)
+
+- 第 13 章：
