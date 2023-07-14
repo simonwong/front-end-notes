@@ -40,6 +40,47 @@ export default function useEventCallback<Args extends unknown[], Return>(
 ```
 
 
+
+## hooks 优化
+
+### useSyncExternalStore
+
+参考 [useSyncExternalStore - The underrated React API
+](https://thisweekinreact.com/articles/useSyncExternalStore-the-underrated-react-api)
+
+`useSyncExternalStore` 本身是用来处理外部的 store 的。但是像 history、也可以认为是一种外部 store 来优化。
+
+```js
+function useHistorySelector(selector) {
+  const history = useHistory();
+  return useSyncExternalStore(history.listen, () =>
+    selector(history)
+  );
+}
+```
+
+```jsx
+function CurrentPathname() {
+  const pathname = useHistorySelector(
+    (history) => history.location.pathname
+  );
+  return <div>{pathname}</div>;
+}
+
+function CurrentHash() {
+  const hash = useHistorySelector(
+    (history) => history.location.hash
+  );
+  return <div>{hash}</div>;
+}
+```
+
+
+
+
+
+
+
 ## 功能 hooks
 
 ### 存储事件回调

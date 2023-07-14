@@ -72,4 +72,3 @@ index.ts 文件 export 了 `@umijs/runtime` 运行时的组件方法，如 `Link
 
 ![](http://file.wangsijie.top/blog/202111241755577.png)
 
-
