@@ -31,7 +31,7 @@ const FeatureList: FeatureItem[] = [
   },
 ]
 
-interface FeatureProps extends FeatureItem {}
+type FeatureProps = FeatureItem
 
 const Feature: React.FC<FeatureProps> = ({ Svg, title, description }) => (
   <div className={clsx('col col--4')}>
