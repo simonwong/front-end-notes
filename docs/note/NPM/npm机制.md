@@ -4,7 +4,7 @@
 
 ## npm 安装机制
 
-![](http://file.wangsijie.top/blog/20201223092723.png)
+![](https://file.wangsijie.top/blog/20201223092723.png)
 
 ## npm 缓存机制
 
@@ -28,7 +28,7 @@ index-v5 是 content-v2 的文件索引
 
 现在的 npm 依赖会使用**扁平化安装模式**
 
-![](http://file.wangsijie.top/blog/20201223092938.png)
+![](https://file.wangsijie.top/blog/20201223092938.png)
 
 
 
@@ -42,7 +42,7 @@ index-v5 是 content-v2 的文件索引
 
 这时可以执行 `npm dedupe` 命令来优化结构，达到这样的效果。Yarn 在安装依赖时会自动执行 dedupe 命令
 
-![](http://file.wangsijie.top/blog/20201223092901.png)
+![](https://file.wangsijie.top/blog/20201223092901.png)
 
 
 
@@ -58,7 +58,7 @@ index-v5 是 content-v2 的文件索引
 
 
 
-![](http://file.wangsijie.top/blog/20201223093031.png)
+![](https://file.wangsijie.top/blog/20201223093031.png)
 
 
 

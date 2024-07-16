@@ -95,7 +95,7 @@ pnpm 通过硬链接和符号链接（软链接、Symbolic link）链接到全�
 - .modules.yaml
 ```
 
-![](http://file.wangsijie.top/blog/202202172118271.jpeg)
+![](https://file.wangsijie.top/blog/202202172118271.jpeg)
 
 
 

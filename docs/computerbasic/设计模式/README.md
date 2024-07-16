@@ -48,7 +48,7 @@
 
 
 
-![](http://file.wangsijie.top/blog/20210717151106.jpeg)
+![](https://file.wangsijie.top/blog/20210717151106.jpeg)
 
 ## 怎样使用设计模式
 

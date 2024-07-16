@@ -6,7 +6,7 @@ React 为每一个元素都创建了一个 Fiber 节点，最终组成一颗 Fib
 
 
 
-![](http://file.wangsijie.top/blog/202201261708798.png)
+![](https://file.wangsijie.top/blog/202201261708798.png)
 
 
 
@@ -93,6 +93,6 @@ React 总是一次性更新 DOM，不会显示部分结果，workInProgress tree
 
 如下， effects list 会跳过不需要更新的节点。
 
-![](http://file.wangsijie.top/blog/202201261547305.png)
+![](https://file.wangsijie.top/blog/202201261547305.png)
 
-![](http://file.wangsijie.top/blog/202201261548456.png)
+![](https://file.wangsijie.top/blog/202201261548456.png)

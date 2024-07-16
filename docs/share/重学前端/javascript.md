@@ -68,7 +68,7 @@ Number、String、Boolean、Symbol
 
 ### 类型转换
 
-![](http://file.wangsijie.top/share/chongxuefe/2019-02-1871bafbd2404dc3ffa5ccf5d0ba077720.jpg)
+![](https://file.wangsijie.top/share/chongxuefe/2019-02-1871bafbd2404dc3ffa5ccf5d0ba077720.jpg)
 
 
 
@@ -250,7 +250,7 @@ window上的属性一部分来自 JavaScript 语言，一部分来自浏览器�
 
 ### 内置对象·原生对象
 
-![](http://file.wangsijie.top/share/chongxuefe/07f7826ffeb895e2e8a59dd186cf7758.png)
+![](https://file.wangsijie.top/share/chongxuefe/07f7826ffeb895e2e8a59dd186cf7758.png)
 
 > 几乎所有这些构造器的能力都是无法用纯js代码实现的，也无法用 class/extend 继承
 
@@ -296,7 +296,7 @@ window上的属性一部分来自 JavaScript 语言，一部分来自浏览器�
 
 ### 闭包
 
-![](http://file.wangsijie.top/share/chongxuefe/68f50c00d475a7d6d8c7eef6a91b2152.png)
+![](https://file.wangsijie.top/share/chongxuefe/68f50c00d475a7d6d8c7eef6a91b2152.png)
 
 > 其实只是一个绑定了**执行环境**的函数
 
@@ -357,11 +357,11 @@ Completion Record 用于描述异常、跳出等语句执行过程，表示一�
 
 
 
-![](http://file.wangsijie.top/share/chongxuefe/98ce53be306344c018cddd6c083392d5.jpg)
+![](https://file.wangsijie.top/share/chongxuefe/98ce53be306344c018cddd6c083392d5.jpg)
 
 
 
-![](http://file.wangsijie.top/share/chongxuefe/7760027d7ee09bdc8ec140efa9caf1d3.png)
+![](https://file.wangsijie.top/share/chongxuefe/7760027d7ee09bdc8ec140efa9caf1d3.png)
 
 
 

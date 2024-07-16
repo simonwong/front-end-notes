@@ -4,7 +4,7 @@
 
 umi 的微内核架构本质是配置收集器和插件管理器。
 
-![](http://file.wangsijie.top/blog/202111241754810.png)
+![](https://file.wangsijie.top/blog/202111241754810.png)
 
 ### umi
 
@@ -70,5 +70,5 @@ index.ts 文件 export 了 `@umijs/runtime` 运行时的组件方法，如 `Link
 
 
 
-![](http://file.wangsijie.top/blog/202111241755577.png)
+![](https://file.wangsijie.top/blog/202111241755577.png)
 

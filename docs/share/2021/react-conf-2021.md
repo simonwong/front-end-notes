@@ -44,7 +44,7 @@ Concurrent rendering并发渲染
 
 - 0 bundle
 
-![](http://file.wangsijie.top/blog/202112091457531.png)
+![](https://file.wangsijie.top/blog/202112091457531.png)
 
 
 
@@ -127,7 +127,7 @@ relay、RN 桌面端、机器学习
 
 ### React 18 for External Store Libraries
 
-![](http://file.wangsijie.top/blog/202112121154013.png)
+![](https://file.wangsijie.top/blog/202112121154013.png)
 
 external stores 在 React 18 的 concurrent render 中可能会存在问题，同一个东西在不同组件
 

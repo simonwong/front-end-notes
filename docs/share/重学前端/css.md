@@ -25,7 +25,7 @@
 
 
 
-![](http://file.wangsijie.top/share/chongxuefed/56974c0265982b9ac84b067cd623e00.png)
+![](https://file.wangsijie.top/share/chongxuefed/56974c0265982b9ac84b067cd623e00.png)
 
 
 
@@ -155,4 +155,4 @@ Alpha 通道用于透明度。
 >
 > 我们用专业的术语叫做色相（H）。加上颜色的纯度（S）和明度（L），就构成了一种颜色的表示。
 
-![](http://file.wangsijie.top/blog/20191219154608.png)
+![](https://file.wangsijie.top/blog/20191219154608.png)

@@ -10,11 +10,11 @@
 
 没有并发，意味着一次只能进行一次电话交谈，先跟 Alice 通话，而 Bob 打电话给我必须先结束 Alice 的通话，才能与 Bob 通话。
 
-![](http://file.wangsijie.top/blog/202202081018443.png)
+![](https://file.wangsijie.top/blog/202202081018443.png)
 
 并发，意味着一次可以进行多个对话，我可以先让 Alice 暂停一会儿，跟 Bob 通话后再恢复 Alice 的通话。
 
-![](http://file.wangsijie.top/blog/202202081019915.png)
+![](https://file.wangsijie.top/blog/202202081019915.png)
 
 注意：并发不一定意味着同时跟两个人交谈，而是在打多个电话时，可以选择跟谁交谈。
 
@@ -112,7 +112,7 @@ React 18中，[startTransition](https://github.com/reactwg/react-18/discussions/
 
 你和朋友达成一致，你的朋友说完一句话后，您立即开始回复，无需等待。但是，如果朋友想继续说，那可能会打断你，因此你放弃回复，等待下一次再试。（如果过了一定时间，你都没有机会回复，你可以打断他们，防止你一直没机会回复）
 
-![](http://file.wangsijie.top/blog/202202081356461.png)
+![](https://file.wangsijie.top/blog/202202081356461.png)
 
 
 

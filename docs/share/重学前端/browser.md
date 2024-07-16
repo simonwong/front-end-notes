@@ -2,7 +2,7 @@
 
 
 
-![](http://file.wangsijie.top/share/chongxuefe/6391573a276c47a9a50ae0cbd2c5844c.jpg)
+![](https://file.wangsijie.top/share/chongxuefe/6391573a276c47a9a50ae0cbd2c5844c.jpg)
 
 1. 浏览器使用 HTTP / HTTPS 协议，向服务端请求页面
 2. 解析请求到的 HTML 代码，构建成 DOM 树
@@ -19,7 +19,7 @@
 
 ### 一、HTTP 协议
 
-![](http://file.wangsijie.top/share/chongxuefe/3db5e0f362bc276b83c7564430ecb0a1.jpg)
+![](https://file.wangsijie.top/share/chongxuefe/3db5e0f362bc276b83c7564430ecb0a1.jpg)
 
 304 协议：
 
@@ -152,7 +152,7 @@ document.styleSheets 获取文档中所有的样式表
 
 #### 全尺寸信息
 
-![](http://file.wangsijie.top/share/chongxuefe/b6c7281d86eb7214edf17069f95ae610.png)
+![](https://file.wangsijie.top/share/chongxuefe/b6c7281d86eb7214edf17069f95ae610.png)
 
 ## 事件
 
