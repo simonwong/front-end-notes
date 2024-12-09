@@ -9,7 +9,7 @@
 - [When to use `never` and `unknown` in TypeScript](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/)
 - [The top types `any` and `unknown` in TypeScript](https://2ality.com/2020/06/any-unknown-typescript.html)
 
-![](https://file.wangsijie.top/blog/202203311149674.png)
+![](https://file.simonwong.cn/blog/202203311149674.png)
 
 
 

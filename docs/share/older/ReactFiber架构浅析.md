@@ -15,7 +15,7 @@
 - 组件树越大，递归遍历成本越高，持续占用主线程 --> 导致主线程上的布局、动画等周期性任务以及交互响应无法立即得到处理，造成卡顿
 - 执行时间过长，导致fps降低
 
-![](https://file.wangsijie.top/share/3.png)
+![](https://file.simonwong.cn/share/3.png)
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-![](https://file.wangsijie.top/share/4.png)
+![](https://file.simonwong.cn/share/4.png)
 
 
 
@@ -104,9 +104,9 @@ diff是一次性计算出所有差异，再一次性执行patch
 
 
 
-![](https://file.wangsijie.top/share/5.png)
+![](https://file.simonwong.cn/share/5.png)
 
-![](https://file.wangsijie.top/share/7.png)
+![](https://file.simonwong.cn/share/7.png)
 
 ### 执行顺序 ###
 
@@ -124,7 +124,7 @@ Fiber是，A -> B 发现有更重要的事情，中断，然后回来执行B -> 
 
 时间切片：A-> B切片 B-> C切片。A -> B执行了一半，发现时间用完了，赶紧过去看看有没有紧急任务。发现有。马上去执行重要的任务，然后回来重新A -> B
 
-![ ](https://file.wangsijie.top/share/6.jpg)
+![ ](https://file.simonwong.cn/share/6.jpg)
 
 
 

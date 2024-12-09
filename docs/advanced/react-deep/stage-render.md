@@ -1,6 +1,6 @@
 # render 流程
 
-![](https://file.wangsijie.top/blog/202202201216897.png)
+![](https://file.simonwong.cn/blog/202202201216897.png)
 
 
 
@@ -8,7 +8,7 @@
 
 
 
-![](https://file.wangsijie.top/blog/202201261810754.gif)
+![](https://file.simonwong.cn/blog/202201261810754.gif)
 
 
 
@@ -84,7 +84,7 @@
 
 ### ensureRootIsScheduled
 
-![](https://file.wangsijie.top/blog/202203071117141.png)
+![](https://file.simonwong.cn/blog/202203071117141.png)
 
 该方法是在 scheduleUpdateOnFiber 中被调用的。
 

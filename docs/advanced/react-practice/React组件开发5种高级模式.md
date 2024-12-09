@@ -37,7 +37,7 @@ export { Usage };
 
 - 关注点分离：大部分逻辑包含在主 `Counter` 组件，然后通过 `Context` 共享 states 和 handlers
 
-![](https://file.wangsijie.top/blog/20210531135914.png)
+![](https://file.simonwong.cn/blog/20210531135914.png)
 
 ### 缺点
 

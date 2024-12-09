@@ -4,7 +4,7 @@ webpack 是一个现代 JavaScript 应用程序的*静态模块打包器(module 
 
 
 
-![](https://file.wangsijie.top/share/webpack-controdition.png)
+![](https://file.simonwong.cn/share/webpack-controdition.png)
 
 
 

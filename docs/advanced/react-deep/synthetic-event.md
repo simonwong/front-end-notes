@@ -56,7 +56,7 @@ React 和原生事件互用的执行顺序（不推荐这么使用，会非常�
 
 为什么合成时间捕获先执行，冒泡后执行？**因为 React 的事件都是委托给 root 节点（以前是 html 节点）执行的。**
 
-![](https://file.wangsijie.top/blog/202203011719336.png)
+![](https://file.simonwong.cn/blog/202203011719336.png)
 
 ## 事件机制
 

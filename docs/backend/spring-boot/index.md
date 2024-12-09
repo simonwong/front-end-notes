@@ -6,7 +6,7 @@
 
 
 
-![](https://file.wangsijie.top/blog/202308020926796.jpg)
+![](https://file.simonwong.cn/blog/202308020926796.jpg)
 
 - 终端显示层：
 

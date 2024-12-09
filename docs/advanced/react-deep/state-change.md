@@ -37,7 +37,7 @@ WIP queue 处理的更新比 current 多
 
 至关重要的是，跳过的更新之后的所有更新也会保留在队列中（不管它们的优先级如何），这意味着高优先级更新有时会以两种不同的优先级处理两次。我们还保持跟踪一个基本状态，他表示应用队列中第一次更新之前的状态。
 
-![](https://file.wangsijie.top/blog/202201241722787.png)
+![](https://file.simonwong.cn/blog/202201241722787.png)
 
 图片自制，内容来自 [Andrew Clark: 不同优先级流程 (in Twitter)](https://twitter.com/acdlite/status/978412930973687808)
 

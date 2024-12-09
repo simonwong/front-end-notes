@@ -66,7 +66,7 @@ ruby使用场景
 
 
 
-![](https://file.wangsijie.top/share/chongxuefe/2019-02-189684130e423b6734b23652f4f0b6359e.jpg)
+![](https://file.simonwong.cn/share/chongxuefe/2019-02-189684130e423b6734b23652f4f0b6359e.jpg)
 
 
 
@@ -162,7 +162,7 @@ DOM API
 
 ### 节点
 
-![](https://file.wangsijie.top/share/chongxuefe/6e278e450d8cc7122da3616fd18b9cf6.png)
+![](https://file.simonwong.cn/share/chongxuefe/6e278e450d8cc7122da3616fd18b9cf6.png)
 
 
 
@@ -231,7 +231,7 @@ Range API 是一个比较专业的领域，用来做富文本编辑器
 
 
 
-![](https://file.wangsijie.top/share/chongxuefe/caab7832c425b3af2b3adae747e6f551.png)
+![](https://file.simonwong.cn/share/chongxuefe/caab7832c425b3af2b3adae747e6f551.png)
 
 
 

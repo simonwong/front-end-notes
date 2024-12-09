@@ -2,7 +2,7 @@
 
 
 
-![](https://file.wangsijie.top/18-5-22/91985389.jpg)
+![](https://file.simonwong.cn/18-5-22/91985389.jpg)
 
 
 
@@ -70,6 +70,19 @@
   `git remote prune origin` 或者 `git fetch --prune`
 
   区别参考 [What are the differences between git remote prune, git prune, git fetch --prune, etc](https://stackoverflow.com/questions/20106712/what-are-the-differences-between-git-remote-prune-git-prune-git-fetch-prune)
+  
+- 大小写敏感
+
+  `git config core.ignoreCase false` 设置大小写敏感。
+
+  此时将已经提交的文件修改大小写时，无法被识别，通过清楚缓存
+
+  ```
+  git rm -r --cached .
+  git add --all .
+  ```
+
+  
 
 ## 常用操作
 

@@ -13,7 +13,7 @@
 
 ## 基本结构
 
-![](https://file.wangsijie.top/share/nginx/20190312111900.png)
+![](https://file.simonwong.cn/share/nginx/20190312111900.png)
 
 
 

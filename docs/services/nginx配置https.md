@@ -10,7 +10,7 @@
 
 我们可以通过 `nginx -V` 命令来查看版本以及支持的配置。
 
-![](https://file.wangsijie.top/blog/20200203093550.png)
+![](https://file.simonwong.cn/blog/20200203093550.png)
 
 
 
@@ -132,7 +132,7 @@ server {
 
 使用 `http:// `访问，就会如下显示
 
-![](https://file.wangsijie.top/blog/20200202134046.png)
+![](https://file.simonwong.cn/blog/20200202134046.png)
 
 ## 配置 https
 
@@ -160,11 +160,11 @@ server {
 
 
 
-![](https://file.wangsijie.top/blog/20200202135322.png)
+![](https://file.simonwong.cn/blog/20200202135322.png)
 
 
 
-![](https://file.wangsijie.top/blog/20200202135347.png)
+![](https://file.simonwong.cn/blog/20200202135347.png)
 
 ### 修改 http 配置
 
@@ -294,7 +294,7 @@ listen	[::]:443 ssl http2;
 
 重启 nginx 后，你可以在这个网站上 https://tools.keycdn.com/http2-test 测试http2有没有配置成功。
 
-![](https://file.wangsijie.top/blog/20200202223844.png)
+![](https://file.simonwong.cn/blog/20200202223844.png)
 
 
 

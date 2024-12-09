@@ -1,6 +1,6 @@
 # TypeScript、Rollup 搭建工具库
 
-![](https://file.wangsijie.top/blog/20191226183850.png)
+![](https://file.simonwong.cn/blog/20191226183850.png)
 
 
 
@@ -359,7 +359,7 @@ export default function myFirstFunc (str: string) {
 
 由于使用了 ts ，可以很方便的实现快速补全的需求，按照上面的例子，项目中使用这个包后，vscode 上输入就会有如下效果
 
-![](https://file.wangsijie.top/blog/20191226114541.png)
+![](https://file.simonwong.cn/blog/20191226114541.png)
 
 
 
@@ -458,7 +458,7 @@ yarn test
 
 是不是成功了呢😌
 
-![](https://file.wangsijie.top/blog/20191226154137.png)
+![](https://file.simonwong.cn/blog/20191226154137.png)
 
 
 
@@ -548,7 +548,7 @@ yarn add -D @microsoft/api-extractor
 
 之后使用方法就有这样的提示，是不是会用的很方便嘞😉
 
-![](https://file.wangsijie.top/blog/20191226164824.png)
+![](https://file.simonwong.cn/blog/20191226164824.png)
 
 
 
@@ -843,7 +843,7 @@ prepublishOnly 可以在 publish 的时候，先 lint 验证， 再 jest 测试 
 
 - `yarn changelog` 看看你的 changelog.md 就自动生成了🥳
 
-![](https://file.wangsijie.top/blog/20191227100915.png)
+![](https://file.simonwong.cn/blog/20191227100915.png)
 
 
 

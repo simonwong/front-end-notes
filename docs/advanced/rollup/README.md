@@ -214,7 +214,7 @@ export { data, main };
 
 类之间的关系如下图
 
-![](https://file.wangsijie.top/blog/202203221738992.png)
+![](https://file.simonwong.cn/blog/202203221738992.png)
 
 
 

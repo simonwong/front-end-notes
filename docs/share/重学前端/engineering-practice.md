@@ -23,7 +23,7 @@
 
 ### 技术方案
 
-![](https://file.wangsijie.top/blog/20191219173001.jpg)
+![](https://file.simonwong.cn/blog/20191219173001.jpg)
 
 ### 执行
 
